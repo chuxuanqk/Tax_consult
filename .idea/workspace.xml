@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9d8ad585-bb0f-47f7-8478-9c9f6d955af2" name="Default" comment="&quot;test&quot;">
+    <list default="true" id="9d8ad585-bb0f-47f7-8478-9c9f6d955af2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tax_consult/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tax_consult/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/wechat/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Tax_consult/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+            <state relative-caret-position="250">
+              <caret line="26" column="50" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
               <folding>
                 <element signature="e#645#677#0" expanded="true" />
               </folding>
@@ -39,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wechat/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
+            <state relative-caret-position="104">
+              <caret line="15" column="4" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="15" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -61,8 +60,8 @@
       <list>
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Tax_consult/settings.py" />
-        <option value="$PROJECT_DIR$/Tax_consult/urls.py" />
         <option value="$PROJECT_DIR$/wechat/views.py" />
+        <option value="$PROJECT_DIR$/Tax_consult/urls.py" />
       </list>
     </option>
   </component>
@@ -76,7 +75,7 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="200" />
+    <option name="x" value="189" />
     <option name="y" value="23" />
     <option name="width" value="996" />
     <option name="height" value="654" />
@@ -193,11 +192,18 @@
       <option name="project" value="LOCAL" />
       <updated>1536719693103</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="&quot;add wechat&quot;">
+      <created>1536723598288</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1536723598288</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="581" y="29" width="996" height="654" extended-state="0" />
+    <frame x="626" y="24" width="996" height="654" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -205,7 +211,7 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32854578" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32854578" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27289048" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.8563734" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
@@ -257,7 +263,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;test&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;test&quot;" />
+    <MESSAGE value="&quot;add wechat&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;add wechat&quot;" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Tax_consult/settings.py">
@@ -295,22 +302,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tax_consult/urls.py">
+    <entry file="file://$PROJECT_DIR$/wechat/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+        <state relative-caret-position="104">
+          <caret line="15" column="4" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="15" />
           <folding>
-            <element signature="e#645#677#0" expanded="true" />
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wechat/views.py">
+    <entry file="file://$PROJECT_DIR$/Tax_consult/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
+        <state relative-caret-position="250">
+          <caret line="26" column="50" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#645#677#0" expanded="true" />
           </folding>
         </state>
       </provider>

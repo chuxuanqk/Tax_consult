@@ -18,9 +18,11 @@ from django.contrib import admin
 from Tax_consult import settings
 from django.views import static
 
+from wechat.views import weixin_main
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^static/(?P<path>.*)$', static.serve,
         {'document_root': settings.STATIC_ROOT}, name='static'),
-    url(r'^wechat/$', )
+    url(r'^wechat/$', weixin_main, name='wechat'),
 ]
