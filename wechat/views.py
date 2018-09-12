@@ -41,7 +41,7 @@ def weixin_main(request):
             return HttpResponse('helloworld')
     else:
         othercontent = autoreply(request)
-        # return HttpResponse(othercontent)
+        return HttpResponse(othercontent)
 
 
 
