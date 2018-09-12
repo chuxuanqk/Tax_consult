@@ -20,8 +20,8 @@ def weixin_main(request):
         timestamp = request.GET.get('timestamp', None)
         nonce = request.GET.get('nonce', None)
         echostr = request.GET.get('nonce', None)
-        # 服务器配置中的token
-        token = 'PANDORA'
+        # 服务器配置中的token = 'hello'
+        token = 'hello123'
         # 把参数放到list中排序后合成一个字符串，
         # 再用sha1加密得到新的字符串与微信发来的signature对比，
         # 如果相同就返回echostr给服务器，校验通过
