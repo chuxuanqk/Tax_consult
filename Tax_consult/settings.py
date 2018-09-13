@@ -138,31 +138,14 @@ LOGGING = {
         'verbose': {'format': '%(levelname)s %(asctime)s %(module)s %(lineno)d %(message)s'},
         'simple': {'format': '%(levelname)s %(module)s %(lineno)d %(message)s'},
     },
-    'filters': {
-        # 开发环境过滤器配置
-        # 'require_debug_true': {
-        #     '()': 'django.utils.log.RequireDebugTrue',
-        #     # 可加入callback过滤
-        # },
-        # 线上处理log日志配置
-        'require_debug_false': {
-            '()': 'django.utils.log.RequireDebugFalse',
-        }
-    },
+
     'handlers': {
-        # 控制台输出
-        'console': {
-            'level': 'DEBUG',
-            'filters': ['require_debug_true'],
-            'class': 'logging.StreamHandler',
-            'formatter': 'simple'
-        },
         # 文件流输出
         'file': {
             'level': 'INFO',
             'class': 'logging.handlers.RotatingFileHandler',
             # 日志文件位置
-            'filename': os.path.join(os.path.dirname(BASE_DIR), "logs/wexin.log"),
+            'filename': os.path.join(os.path.dirname(BASE_DIR), "Tax_consult/logs/weixin.log"),
             'maxBytes': 300 * 1024 * 1024,
             'backupCount': 10,
             'formatter': 'verbose'
@@ -171,7 +154,7 @@ LOGGING = {
     'loggers': {
         'django': {
             # 定义了⼀个名为django的⽇志器处理器
-            'handlers': ['console', 'file'],
+            'handlers': ['file'],
             # 是否允许向上级别冒泡
             'propagate': True,
         },
