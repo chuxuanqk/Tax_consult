@@ -136,13 +136,12 @@ LOGGING = {
     'disable_existing_loggers': False,
     'formatters': {
         'verbose': {'format': '%(levelname)s %(asctime)s %(module)s %(lineno)d %(message)s'},
-        'simple': {'format': '%(levelname)s %(module)s %(lineno)d %(message)s'},
     },
 
     'handlers': {
         # 文件流输出
         'file': {
-            'level': 'INFO',
+            'level': 'ERROR',
             'class': 'logging.handlers.RotatingFileHandler',
             # 日志文件位置
             'filename': os.path.join(os.path.dirname(BASE_DIR), "Tax_consult/logs/weixin.log"),
