@@ -1,14 +1,17 @@
 from django.shortcuts import render
 
 # Create your views here.
-
+import logging
 import hashlib
 import json
 import time
 import xml.etree.ElementTree as ET
+
 from django.utils.encoding import smart_str
 from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponse
+from django.http import response
+
 
 
 # django默认开启csrf防护，这里使用@csrf_exempt去掉防护
@@ -26,18 +29,22 @@ def weixin_main(request):
             # 把参数放到list中排序后合成一个字符串，
             # 再用sha1加密得到新的字符串与微信发来的signature对比，
             # 如果相同就返回echostr给服务器，校验通过
+            logging.error("token=%s" % token)
             list = [token, timestamp, nonce]
             list.sort()
             sha1 = hashlib.sha1()
             map(sha1.update, list)
             hashcode = sha1.hexdigest()
-            print("handle/GET func: hashcode, signature: ", hashcode, signature)
+
+            logging.error(hashcode)
             if hashcode == signature:
+                logging.error(hashcode)
                 return HttpResponse(echostr)
             else:
                 return HttpResponse("field")
         except Exception as e:
-            return HttpResponse(str(e))
+            logging.error('%s' % e)
+            return HttpResponse(echostr)
     # else:
     #     othercontent = autoreply(request)
     #     return HttpResponse(othercontent)
