@@ -38,6 +38,7 @@ def weixin_main(request):
 
             logging.error("nonce=%s" % nonce)
             logging.error("echostr=%s" % echostr)
+            logging.error("timestamp=%s" % timestamp)
             logging.error("hashcode=%s" % hashcode)
             logging.error("signature=%s" % signature)
             if hashcode == signature:
