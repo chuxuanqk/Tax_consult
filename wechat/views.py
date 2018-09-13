@@ -32,9 +32,14 @@ def weixin_main(request):
             logging.error("token=%s" % token)
             list = [token, timestamp, nonce]
             list.sort()
-            sha1 = hashlib.sha1()
-            map(sha1.update, list)
-            hashcode = sha1.hexdigest()
+            list = ''.join(list)
+            hashcode = hashlib.sha1(list.encode("utf-8")).hexdigest()
+            # 官方文档中的hashlib部分出错
+            # list = [token, timestamp, nonce]
+            # list.sort()
+            # sha1 = hashlib.sha1()
+            # map(sha1.update, list)
+            # hashcode = sha1.hexdigest()
 
             logging.error("nonce=%s" % nonce)
             logging.error("echostr=%s" % echostr)
