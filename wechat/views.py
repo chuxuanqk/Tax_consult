@@ -36,7 +36,10 @@ def weixin_main(request):
             map(sha1.update, list)
             hashcode = sha1.hexdigest()
 
-            logging.error(hashcode)
+            logging.error("nonce=%s" % nonce)
+            logging.error("echostr=%s" % echostr)
+            logging.error("hashcode=%s" % hashcode)
+            logging.error("signature=%s" % signature)
             if hashcode == signature:
                 logging.error(hashcode)
                 return HttpResponse(echostr)
