@@ -22,26 +22,25 @@ def weixin_main(request):
             nonce = request.GET.get('nonce', None)
             echostr = request.GET.get('echostr', None)
             # 服务器配置中的token = 'hello'
-            token = 'hello'
+            token = "hello"
             # 把参数放到list中排序后合成一个字符串，
             # 再用sha1加密得到新的字符串与微信发来的signature对比，
             # 如果相同就返回echostr给服务器，校验通过
-            hashlist = [token, timestamp, nonce]
-            hashlist.sort()
-            hashstr = ''.join([s for s in hashlist])
-            # hashstr = hashlib.sha1(hashstr).hexdigest()
-            hashstr = hashlib.sha1()
-            map(hashstr.update, hashlist)
-            hashcode = hashstr.hexdigest()
-            if hashstr == signature:
+            list = [token, timestamp, nonce]
+            list.sort()
+            sha1 = hashlib.sha1()
+            map(sha1.update, list)
+            hashcode = sha1.hexdigest()
+            print("handle/GET func: hashcode, signature: ", hashcode, signature)
+            if hashcode == signature:
                 return HttpResponse(echostr)
             else:
                 return HttpResponse("field")
-        except:
-            return HttpResponse('helloworld')
-    else:
-        othercontent = autoreply(request)
-        return HttpResponse(othercontent)
+        except Exception as e:
+            return HttpResponse(str(e))
+    # else:
+    #     othercontent = autoreply(request)
+    #     return HttpResponse(othercontent)
 
 
 
