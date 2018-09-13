@@ -54,9 +54,9 @@ def weixin_main(request):
         except Exception as e:
             logging.error('%s' % e)
             return HttpResponse(echostr)
-    # else:
-    #     othercontent = autoreply(request)
-    #     return HttpResponse(othercontent)
+    else:
+        othercontent = autoreply(request)
+        return HttpResponse(othercontent)
 
 
 
