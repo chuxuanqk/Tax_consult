@@ -18,7 +18,7 @@ from django.contrib import admin
 from Tax_consult import settings
 from django.views import static
 
-from wechat.views import weixin_main
+from wechat.views import weixin_main, GetInfoView, GetListView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -26,4 +26,6 @@ urlpatterns = [
         {'document_root': settings.STATIC_ROOT}, name='static'),
     url(r'^wechat/$', weixin_main, name='wechat'),
 
+    url(r'^GetInfoView/(.+)/$', GetInfoView.as_view(), name='GetInfoView'),
+    url(r'^GetListView/(.*?)/$', GetListView.as_view(), name='获取问题列表'),
 ]

@@ -1,0 +1,336 @@
+ERROR 2018-09-14 03:08:46,765 exception 135 Internal Server Error: /GetInfoView/1/
+Traceback (most recent call last):
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 147, in get
+    return HttpResponse("p1 = {a}".format(param1))
+KeyError: 'a'
+ERROR 2018-09-14 03:08:46,806 basehttp 124 "GET /GetInfoView/1/ HTTP/1.1" 500 27
+ERROR 2018-09-14 03:08:47,804 exception 135 Internal Server Error: /GetInfoView/1/
+Traceback (most recent call last):
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 147, in get
+    return HttpResponse("p1 = {a}".format(param1))
+KeyError: 'a'
+ERROR 2018-09-14 03:08:47,805 basehttp 124 "GET /GetInfoView/1/ HTTP/1.1" 500 27
+ERROR 2018-09-14 03:08:49,357 exception 135 Internal Server Error: /GetInfoView/1/
+Traceback (most recent call last):
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 147, in get
+    return HttpResponse("p1 = {a}".format(param1))
+KeyError: 'a'
+ERROR 2018-09-14 03:08:49,360 basehttp 124 "GET /GetInfoView/1/ HTTP/1.1" 500 27
+ERROR 2018-09-14 03:24:08,496 exception 135 Internal Server Error: /GetInfoView/3952/
+Traceback (most recent call last):
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 150, in get
+    answer = answer[0]
+IndexError: index 0 is out of bounds for axis 0 with size 0
+ERROR 2018-09-14 03:24:08,508 basehttp 124 "GET /GetInfoView/3952/ HTTP/1.1" 500 27
+ERROR 2018-09-14 03:24:23,522 exception 135 Internal Server Error: /GetInfoView/3952/
+Traceback (most recent call last):
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 150, in get
+    answer = answer[0]
+IndexError: index 0 is out of bounds for axis 0 with size 0
+ERROR 2018-09-14 03:24:23,523 basehttp 124 "GET /GetInfoView/3952/ HTTP/1.1" 500 27
+ERROR 2018-09-14 03:24:50,453 exception 135 Internal Server Error: /GetInfoView/3952/
+Traceback (most recent call last):
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 150, in get
+    answer = answer[0]
+IndexError: index 0 is out of bounds for axis 0 with size 0
+ERROR 2018-09-14 03:24:50,460 basehttp 124 "GET /GetInfoView/3952/ HTTP/1.1" 500 27
+ERROR 2018-09-14 03:24:57,638 exception 135 Internal Server Error: /GetInfoView/3952/
+Traceback (most recent call last):
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 150, in get
+    answer = answer[0]
+IndexError: index 0 is out of bounds for axis 0 with size 0
+ERROR 2018-09-14 03:24:57,640 basehttp 124 "GET /GetInfoView/3952/ HTTP/1.1" 500 27
+ERROR 2018-09-14 03:25:12,993 exception 135 Internal Server Error: /GetInfoView/3952/
+Traceback (most recent call last):
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 150, in get
+    answer = answer[0]
+IndexError: index 0 is out of bounds for axis 0 with size 0
+ERROR 2018-09-14 03:25:13,001 basehttp 124 "GET /GetInfoView/3952/ HTTP/1.1" 500 27
+ERROR 2018-09-14 03:27:33,542 exception 135 Internal Server Error: /GetInfoView/3952/
+Traceback (most recent call last):
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 150, in get
+    answer = answer[0]
+IndexError: index 0 is out of bounds for axis 0 with size 0
+ERROR 2018-09-14 03:27:33,549 basehttp 124 "GET /GetInfoView/3952/ HTTP/1.1" 500 27
+ERROR 2018-09-14 03:27:34,429 exception 135 Internal Server Error: /GetInfoView/3952/
+Traceback (most recent call last):
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 150, in get
+    answer = answer[0]
+IndexError: index 0 is out of bounds for axis 0 with size 0
+ERROR 2018-09-14 03:27:34,431 basehttp 124 "GET /GetInfoView/3952/ HTTP/1.1" 500 27
+ERROR 2018-09-14 03:35:30,744 exception 135 Internal Server Error: /GetInfoView/3952/
+Traceback (most recent call last):
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 148, in get
+    answer = answer[0]
+IndexError: index 0 is out of bounds for axis 0 with size 0
+ERROR 2018-09-14 03:35:30,753 basehttp 124 "GET /GetInfoView/3952/ HTTP/1.1" 500 27
+ERROR 2018-09-14 03:35:40,134 exception 135 Internal Server Error: /GetInfoView/3952/
+Traceback (most recent call last):
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 148, in get
+    answer = answer[0]
+IndexError: index 0 is out of bounds for axis 0 with size 0
+ERROR 2018-09-14 03:35:40,142 basehttp 124 "GET /GetInfoView/3952/ HTTP/1.1" 500 27
+ERROR 2018-09-14 06:11:43,522 exception 135 Internal Server Error: /GetInfoView/123/
+Traceback (most recent call last):
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 144, in get
+    answer = answer[0]
+IndexError: index 0 is out of bounds for axis 0 with size 0
+ERROR 2018-09-14 06:11:43,526 basehttp 124 "GET /GetInfoView/123/ HTTP/1.1" 500 27
+ERROR 2018-09-14 06:12:57,249 exception 135 Internal Server Error: /GetInfoView/123/
+Traceback (most recent call last):
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 144, in get
+    answer = answer[0]
+IndexError: index 0 is out of bounds for axis 0 with size 0
+ERROR 2018-09-14 06:12:57,256 basehttp 124 "GET /GetInfoView/123/ HTTP/1.1" 500 27
+ERROR 2018-09-14 06:13:25,505 exception 135 Internal Server Error: /GetInfoView/123/
+Traceback (most recent call last):
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 149, in get
+    return render(request, content=content)
+TypeError: render() got an unexpected keyword argument 'content'
+ERROR 2018-09-14 06:13:25,573 basehttp 124 "GET /GetInfoView/123/ HTTP/1.1" 500 27
+ERROR 2018-09-14 06:13:28,210 exception 135 Internal Server Error: /GetInfoView/123/
+Traceback (most recent call last):
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 149, in get
+    return render(request, content=content)
+TypeError: render() got an unexpected keyword argument 'content'
+ERROR 2018-09-14 06:13:28,211 basehttp 124 "GET /GetInfoView/123/ HTTP/1.1" 500 27
+ERROR 2018-09-14 06:20:42,841 exception 135 Internal Server Error: /GetInfoView/123/
+Traceback (most recent call last):
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 149, in get
+    return render(request, content=content)
+TypeError: render() got an unexpected keyword argument 'content'
+ERROR 2018-09-14 06:20:42,977 basehttp 124 "GET /GetInfoView/123/ HTTP/1.1" 500 27
+ERROR 2018-09-14 06:21:13,074 exception 135 Internal Server Error: /GetInfoView/123/
+Traceback (most recent call last):
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 149, in get
+    return render(request, content=content)
+TypeError: render() got an unexpected keyword argument 'content'
+ERROR 2018-09-14 06:21:13,111 basehttp 124 "GET /GetInfoView/123/ HTTP/1.1" 500 27
+ERROR 2018-09-14 07:02:51,939 exception 135 Internal Server Error: /GetListView/增值税/
+Traceback (most recent call last):
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 165, in get
+    sql = "select * from 'asks_answer' where class4 LIKE '%{ask}%'".format(ask=ask_message)
+NameError: name 'ask_message' is not defined
+ERROR 2018-09-14 07:02:51,973 basehttp 124 "GET /GetListView/%E5%A2%9E%E5%80%BC%E7%A8%8E/ HTTP/1.1" 500 27
+ERROR 2018-09-14 07:11:12,818 exception 135 Internal Server Error: /GetInfoView/123/
+Traceback (most recent call last):
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 150, in get
+    answer = answer[0]
+IndexError: index 0 is out of bounds for axis 0 with size 0
+ERROR 2018-09-14 07:11:12,871 basehttp 124 "GET /GetInfoView/123/ HTTP/1.1" 500 27
+ERROR 2018-09-14 07:11:19,487 exception 135 Internal Server Error: /GetInfoView/1234/
+Traceback (most recent call last):
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 150, in get
+    answer = answer[0]
+IndexError: index 0 is out of bounds for axis 0 with size 0
+ERROR 2018-09-14 07:11:19,493 basehttp 124 "GET /GetInfoView/1234/ HTTP/1.1" 500 27
