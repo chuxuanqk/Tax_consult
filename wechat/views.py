@@ -141,9 +141,8 @@ class GetInfoView(View):
         answer = answer[0]
         print('answer{}'.format(answer))
 
-        return HttpResponse("{answer}".format(answer=answer))
-        # content = "<a href='https://baidu.com'>请点击下载</a>"
-        # return HttpResponse(content=content)
+        return render(request,'answer.html',locals())
+
 
 
 class GetListView(View):
