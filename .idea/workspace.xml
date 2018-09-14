@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d8ad585-bb0f-47f7-8478-9c9f6d955af2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/LZ_ZX.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tax_consult/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tax_consult/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tax_consult/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tax_consult/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/weixin.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/weixin.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wechat/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/wechat/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,8 +58,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wechat/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="77" column="48" selection-start-line="77" selection-start-column="48" selection-end-line="77" selection-end-column="48" />
+            <state relative-caret-position="378">
+              <caret line="182" column="8" selection-start-line="182" selection-start-column="8" selection-end-line="182" selection-end-column="8" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -392,7 +388,21 @@
       <option name="project" value="LOCAL" />
       <updated>1536892685772</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="&quot;添加回复信息超链接_到wechat&quot;">
+      <created>1536910880029</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1536910880029</updated>
+    </task>
+    <task id="LOCAL-00020" summary="&quot;修改wechat回复格式&quot;">
+      <created>1536912489098</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1536912489098</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -469,7 +479,9 @@
     <MESSAGE value="&quot;修改官方文档中的hashlib中的错误&quot;" />
     <MESSAGE value="&quot;添加微信自动回复__test&quot;" />
     <MESSAGE value="&quot;添加回复信息超链接_test&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;添加回复信息超链接_test&quot;" />
+    <MESSAGE value="&quot;添加回复信息超链接_到wechat&quot;" />
+    <MESSAGE value="&quot;修改wechat回复格式&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;修改wechat回复格式&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -666,8 +678,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wechat/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="77" column="48" selection-start-line="77" selection-start-column="48" selection-end-line="77" selection-end-column="48" />
+        <state relative-caret-position="378">
+          <caret line="182" column="8" selection-start-line="182" selection-start-column="8" selection-end-line="182" selection-end-column="8" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>

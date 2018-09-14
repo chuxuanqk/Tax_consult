@@ -171,13 +171,16 @@ def query_answer(param):
     dict_id = {}
     dict_id = df.set_index('id').T.to_dict('list')
 
-    head = "您是否是想要咨询一下问题?"
+    head = "您是否是想要咨询以下问题?"
     list_dic = [head]
     i = 0
     for key, value in dict_id.items():
-        i += 1
-        content = "{i}、<a href='http://0.0.0.0:8000/GetInfoView/{id_1}/'>{question}</a>" \
+        # i += 1
+        # content = "{i}、<a href='http://0.0.0.0:8000/GetInfoView/{id_1}/'>{question}</a>" \
+        #     .format(i=i, id_1=key, question=value[0])
+        content = "{i}、<a href='http://telent.pythonanywhere.com/GetInfoView/{id_1}/'>{question}</a>" \
             .format(i=i, id_1=key, question=value[0])
+
         list_dic.append(content)
 
     return list_dic
