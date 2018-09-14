@@ -75,9 +75,12 @@ def autoreply(request):
         if msg_type == 'text':
 
             ask_message = Content
+            list_dic = []
             list_dic = query_answer(ask_message)
+            list_4 = list_dic[:4]
+            message = "\n".join(list_4)
 
-            replyMsg = TextMsg(toUser, fromUser, list_dic[:4])
+            replyMsg = TextMsg(toUser, fromUser, message)
             print("成功了!!!!!!!!!!!!!!!!!!!")
             print(replyMsg)
             return replyMsg.send()
@@ -168,12 +171,12 @@ def query_answer(param):
     dict_id = {}
     dict_id = df.set_index('id').T.to_dict('list')
 
-    head = "您是否是想要咨询一下问题?<br>"
+    head = "您是否是想要咨询一下问题?"
     list_dic = [head]
     i = 0
     for key, value in dict_id.items():
         i += 1
-        content = "{i}、<a href='http://0.0.0.0:8000/GetInfoView/{id_1}/'>{question}</a><br>" \
+        content = "{i}、<a href='http://0.0.0.0:8000/GetInfoView/{id_1}/'>{question}</a>" \
             .format(i=i, id_1=key, question=value[0])
         list_dic.append(content)
 
