@@ -1,4 +1,4 @@
-from django.shortcuts import render
+
 
 # Create your views here.
 import logging
@@ -9,11 +9,14 @@ import pandas as pd
 import sqlite3
 import xml.etree.ElementTree as ET
 
+from utils.tuling import TL
+
 from django.utils.encoding import smart_str
 from django.views.decorators.csrf import csrf_exempt
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.views import View
 from django.db import connection
+from django.shortcuts import render
 
 
 # django默认开启csrf防护，这里使用@csrf_exempt去掉防护
@@ -73,7 +76,6 @@ def autoreply(request):
         fromUser = ToUserName
 
         if msg_type == 'text':
-
             ask_message = Content
             list_dic = []
             list_dic = query_answer(ask_message)
@@ -141,18 +143,25 @@ class GetInfoView(View):
         answer = answer[0]
         print('answer{}'.format(answer))
 
-        return render(request,'answer.html',locals())
-
+        return render(request, 'answer.html', locals())
 
 
 class GetListView(View):
     """
     获取答案超链接
     """
+
     def get(self, request, param):
         list_dic = query_answer(param)
         print("成功了!!!!!!!!!!!!!!!!!!!")
-        return HttpResponse(list_dic[:4])
+        re = {
+            'code': '200',
+            'message': '成功',
+            'data': list_dic[:4],
+        }
+
+        return JsonResponse(re, content_type='application/json')
+
 
 def query_answer(param):
     """
@@ -175,11 +184,78 @@ def query_answer(param):
     i = 0
     for key, value in dict_id.items():
         i += 1
-        # content = "{i}、<a href='http://0.0.0.0:8000/GetInfoView/{id_1}/'>{question}</a>" \
-        #     .format(i=i, id_1=key, question=value[0])
         content = "{i}、<a href='http://telent.pythonanywhere.com/GetInfoView/{id_1}/'>{question}</a>" \
             .format(i=i, id_1=key, question=value[0])
-
         list_dic.append(content)
 
     return list_dic
+
+
+class talkView(View):
+    def get(self,request):
+
+        return render(request, 'talk.html', {})
+
+
+class Get_talkView(View):
+    """
+    网页版聊天
+    """
+
+    def get(self, request):
+        print('hello')
+        return render(request, 'talk.html', {})
+
+    def post(self, request):
+        source = request.POST.get('msg')
+        list_count, list_dic = self.talk_query(source)
+
+        print("成功了!!!!!!!!!!!!!!!!!!!")
+        content = []
+        list_res = []
+
+        if list_count == 1:
+            head = "以下是您咨询的答案:"
+            list_res.append(head)
+            for k, v in list_dic.items():
+                content = v['answer']
+            list_res.append(content)
+            list_res = '<br>'.join(list_res)
+        elif list_count > 1:
+            head = "您的问题是:"
+            list_res.append(head)
+            for k, v in list_dic.items():
+                link = "<a href='#' onclick=showAsk('{question}')>{question_1}</a>" \
+                    .format(question=v['class4'], question_1=v['class4'])
+                content.append(link)
+            content = content[:4]
+            list = '<br>'.join(content)
+            list_res.append(list)
+            list_res = '<br>'.join(list_res)
+        else:
+            list_res = TL(source)
+            print(list_res)
+
+        rew = {
+            'code': '200',
+            'message': '成功',
+            'data': list_res,
+        }
+
+        return JsonResponse(rew, content_type='application/json')
+
+    def talk_query(self, param):
+        question = param
+        sql = "select  * from 'asks_answer' where class4 LIKE '%{ask}%'".format(ask=question)
+        df = pd.read_sql_query(sql, connection)
+        df.drop_duplicates("class4",inplace=True)
+        df = df[df['part'] == '0']
+        # df = df[['class4', 'id']]
+        # dataframe类型转换为字典类型
+        # dict_id = {}
+        # dict_id = df.set_index('id').T.to_dict('list')
+        data_count = df.iloc[:, 0].size
+        data_dict = df.to_dict(orient='index')
+        return data_count, data_dict
+
+

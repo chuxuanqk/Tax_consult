@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scale=no"/>
+    <meta name="format-detection" content="telephpne=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <title>税务咨询</title>
+    <link rel="stylesheet" href="/static/csswx/style.css"/>
+    <link rel="stylesheet" href="/static/csswx/meng.css"/>
+    <link rel="stylesheet" href="/static/csswx/normalize.css"/>
+</head>
+<body>
+<div class="pop-wrapper pop-send dis-none-imp">
+    <div class="pop">
+        <img src="/static/images/icon-radio.png" alt=""/>
+        <p>录音中，松开取消</p>
+    </div>
+</div>
+<div class="pop-wrapper pop-cancel dis-none-imp">
+    <div class="pop">
+        <img src="/static/images/icon-radio-back.png" alt=""/>
+        <p>松开手指，取消发送</p>
+    </div>
+</div>
+<div class="talk">
+    <!-- <div class="top">聊天</div> -->
+    <div class="content clear">
+        <!-- <div class="group clear right">
+            <img src="/static/images/me.jpg" class="portrait right" alt=""/>
+            <p class="message right">我们来聊聊天啊~~我们来聊聊天啊~~我们来聊聊天啊~~我们来聊聊天啊~~</p>
+
+        </div>
+        <div class="group clear left">
+            <img src="/static/images/portrait.jpg" class="portrait left" alt=""/>
+            <p class="message left">你想聊什么~~你想聊什么~~你想聊什么~~你想聊什么~~你想聊什么~~你想聊什么~~</p>
+        </div>
+        <div class="group clear right">
+            <img src="/static/images/me.jpg" class="portrait right" alt=""/>
+            <p class="message right">我们来聊聊天啊~~我们来聊聊天啊~~我们来聊聊天啊~~我们来聊聊天啊~~</p>
+
+        </div>
+        <div class="group clear left">
+            <img src="/static/images/portrait.jpg" class="portrait left" alt=""/>
+            <p class="message left">你想聊什么~~</p>
+        </div> -->
+
+
+        <div class="group clear left">
+            <img src="/static/images/portrait.jpg" class="portrait left" alt=""/>
+            <p class="message left">您好！很高兴为您服务，输入你想要的资源即可！</p>
+
+        </div>
+
+
+    </div>
+    <div class="send opt1 dis-none-imp">
+        <span class="change"><i class="dis-none">输入法</i></span>
+        <input type="button" value="按住 说话" class="reform btn-record voice"
+               style="-webkit-user-select: none;-moz-user-select: none;">
+    </div>
+    <div class="send opt2">
+        <span class="change act"><i class="dis-none">输入法</i></span>
+        <input type="text" class="reform btn-record text" id="msg">
+        <i class="wra send-btn">发送</i>
+    </div>
+</div>
+<script type="text/javascript" src="/static/jswx/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="/static/jswx/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="/static/jswx/talkb73c.js"></script>
+<script>
+    function GetUrlParam() {
+        try {
+            var url = window.location.toString();
+            var arrObj = url.split("?");
+            if (arrObj.length > 1) {
+                var arrPara = arrObj[1].split("key=");
+                var str = decodeURI(arrPara[1]);
+                return str;
+            }
+            else {
+                return "";
+            }
+
+        } catch (error) {
+            return "";
+        }
+
+    }
+
+    function showAnswerMsg(msg) {
+        var sendHTML = '<div class="group clear left">' +
+            '<img src="/static/images/portrait.jpg" class="portrait left" alt=""/>' +
+            '<p class="message left">' + msg + '</p>' +
+            '</div>';
+        $(".content").append(sendHTML);
+        //滚动到底部
+        $(".content").scrollTop($(".content")[0].scrollHeight);
+    }
+
+    function send_init(msg) {
+        console.log($("#msg").val());//b不能注释掉，注释掉有问题。
+        $.ajax({
+            url: "/talk/",
+            type: 'POST',
+            data: {"msg":msg},
+            dataType: 'json',
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                showAnswerMsg("网络连接错误123");
+            },
+            success: function (result) {
+                showAnswerMsg(result.data);
+            }
+        });
+    }
+
+    function showAsk_init(msg) {
+        var sendHTML = '<div class="group clear right">' +
+            '<img src="/static/images/me.jpg" class="portrait right" alt=""/>' +
+            '<p class="message right">' + msg + '</p>' +
+            '</div>';
+        $(".content").append(sendHTML);
+        //滚动到底部
+        $(".content").scrollTop($(".content")[0].scrollHeight);
+        //清空输入框
+        $("#msg").val("");
+        send_init(msg);
+    }
+
+    var question_key = GetUrlParam();
+
+    function get_really_key(key) {
+        var arrObj = key.split("、");
+        var really_key = arrObj[1];
+        var key_num = arrObj[0];
+        return key_num, really_key
+    }
+
+    if (question_key === "") {
+
+    } else {
+        showAsk_init(question_key)
+    }
+</script>
+</body>
+
+<!-- Mirrored from www.bjjtat.com/szgs/test/talk.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 16 Sep 2018 03:59:38 GMT -->
+</html>

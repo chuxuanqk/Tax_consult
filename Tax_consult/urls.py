@@ -18,7 +18,8 @@ from django.contrib import admin
 from Tax_consult import settings
 from django.views import static
 
-from wechat.views import weixin_main, GetInfoView, GetListView
+from wechat.views import weixin_main, GetInfoView, GetListView, Get_talkView, talkView
+from django.views.decorators.csrf import csrf_exempt
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -28,4 +29,6 @@ urlpatterns = [
 
     url(r'^GetInfoView/(.+)/$', GetInfoView.as_view(), name='GetInfoView'),
     url(r'^GetListView/(.*?)/$', GetListView.as_view(), name='获取问题列表'),
+    url(r'^talk/$', csrf_exempt(Get_talkView.as_view()), name='聊天'),
+    url(r'^$', talkView.as_view()),
 ]
