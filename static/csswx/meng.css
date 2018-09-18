@@ -1,0 +1,66 @@
+body{
+    background: #f0f0f3;
+    font-family: "Microsoft YaHei";
+}
+/*二维码弹出框*/
+.meng-pop{
+    height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    position: fixed;
+    z-index:100;
+    top: 0;
+    left: 0;
+    /*display: -webkit-box;*/
+    display: -webkit-flex;
+    display: flex;
+    /*-webkit-box-align:center;*/
+    -webkit-align-items:center;
+    align-items:center;
+    /*-webkit-box-pack:center;*/
+    -webkit-justify-content:center;
+    justify-content:center;
+}
+/*消息弹出框*/
+.meng-alert{
+    background: #fff;
+/*  padding: 1em 0; */
+    margin: 1em;
+    text-align: center;
+    background: rgba(255,255,255,1);
+    border-radius: 0.5em;
+    min-width: 80%;
+}
+/* 弹出框 */
+.meng-pop .alert-detail{
+    padding:1.5em 0;
+}
+.meng-alert .btn{
+    text-align: center;
+    border-top: 1px solid #333;
+/*  margin-top: 1em; */
+/*  padding: 1em 0; */
+}
+.meng-alert .btn a{
+/*  margin: 0 3em; */
+    display:inline-block;
+    width:50%;
+    padding:1em 2em;
+}
+/* 弹出框 */
+.meng-pop .alert-detail{
+    padding:1.5em 0;
+}
+.meng-pop .prompt-detail{
+    padding:1.5em 0;
+}
+.meng-aload{
+    width: 5em;
+    min-width: 40%!important;
+}
+.meng-aload img{
+    margin-bottom: 2px;
+}
+.none{
+    display: none!important;
+}

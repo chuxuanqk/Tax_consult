@@ -1,22 +1,24 @@
 
 
 # Create your views here.
+import json
+import re
+import time
+import jieba
+import string
 import logging
 import hashlib
-import json
-import time
 import pandas as pd
-import sqlite3
 import xml.etree.ElementTree as ET
+from zhon.hanzi import punctuation   #中文标点符号
 
 from utils.tuling import TL
 
-from django.utils.encoding import smart_str
-from django.views.decorators.csrf import csrf_exempt
-from django.http import HttpResponse, JsonResponse
 from django.views import View
 from django.db import connection
 from django.shortcuts import render
+from django.http import HttpResponse, JsonResponse
+from django.views.decorators.csrf import csrf_exempt
 
 
 # django默认开启csrf防护，这里使用@csrf_exempt去掉防护
@@ -197,7 +199,7 @@ class talkView(View):
         return render(request, 'talk.html', {})
 
 
-class Get_talkView(View):
+class Get_talkView_old(View):
     """
     网页版聊天
     """
@@ -208,6 +210,9 @@ class Get_talkView(View):
 
     def post(self, request):
         source = request.POST.get('msg')
+        num_id=request.POST.get('num_id',-1)
+
+
         list_count, list_dic = self.talk_query(source)
 
         print("成功了!!!!!!!!!!!!!!!!!!!")
@@ -222,11 +227,11 @@ class Get_talkView(View):
             list_res.append(content)
             list_res = '<br>'.join(list_res)
         elif list_count > 1:
-            head = "您的问题是:"
+            head = "以下是您可能想要咨询的问题:"
             list_res.append(head)
             for k, v in list_dic.items():
-                link = "<a href='#' onclick=showAsk('{question}')>{question_1}</a>" \
-                    .format(question=v['class4'], question_1=v['class4'])
+                link = "<a href='#' onclick=showAsk('{id}','{question}')>{question_1}</a>" \
+                    .format(question=v['class4'], id=v['id'],question_1=v['class4'])
                 content.append(link)
             content = content[:4]
             list = '<br>'.join(content)
@@ -258,4 +263,125 @@ class Get_talkView(View):
         data_dict = df.to_dict(orient='index')
         return data_count, data_dict
 
+
+class Get_talkView(View):
+    """
+    新版
+    """
+
+    def get(self, request):
+        return render(request, 'talk.html', {})
+
+    def post(self, request):
+        source = request.POST.get('msg')
+        num_id=request.POST.get('num_id','-1')
+
+        content = []
+        list_res = []
+
+        if num_id == '-1':
+            answer_dic, question_dic, list_len = self.search(source)
+            if list_len == 1:
+                head = "以下是您咨询的答案:"
+                list_res.append(head)
+                for k, v in answer_dic.items():
+                    content = v
+                list_res.append(content)
+                list_res = '<br>'.join(list_res)
+            elif list_len >1:
+                head = "以下是您可能想要咨询的问题:"
+                list_res.append(head)
+                for k, v in question_dic.items():
+                    link = "<a href='#' onclick=showAsk('{id}','{question}')>{question_1}</a>" \
+                        .format(question=v, id=k, question_1=v)
+                    content.append(link)
+                list = '<br>'.join(content)
+                list_res.append(list)
+                list_res = '<br>'.join(list_res)
+
+            else:
+                list_res = TL(source)
+                print(list_res)
+        else:
+            list_res = self.search_id(num_id)
+
+        rew = {
+            'code': '200',
+            'message': '成功',
+            'data': list_res,
+        }
+        return JsonResponse(rew, content_type='application/json')
+
+
+    def search_id(self, num_id):
+        sql_asks = "select * from 'asks_answer' where id={id}".format(id=num_id)
+        df = pd.read_sql_query(sql_asks, connection)
+        data_dict = df.to_dict(orient='index')
+        for k, v in data_dict.items():
+            answer = v['answer']
+
+        return answer
+
+
+    def search(self,question):
+        # jieba分词
+        question = re.sub(r'[%s]+' % string.punctuation, '', question)
+        sql_asks = "select * from 'asks_answer'"
+        df = pd.read_sql_query(sql_asks, connection)
+        df = df[df['part'] == '0']
+        seg_list = jieba.cut_for_search(question)  # 搜索引擎模式
+        word = ",".join(seg_list)
+        word_list = word.split(',')
+
+        # 获取class4的字典，keys: indexs, values: questions
+        class4_dic = {}
+        class4 = df['class4']
+        class4_dic = class4.to_dict()
+        word_dic = {}
+        # jieba分词，获得分词字典,
+        start_time = time.time()
+        for k, v in class4_dic.items():
+            v = re.sub(r'[%s]+' % punctuation, '', v)
+            seg_list = jieba.cut_for_search(v)
+            word = ','.join(seg_list)
+            word_dic[k] = word
+        end_time = time.time()
+        print("========%s" % (end_time-start_time))
+
+        # 对word_count进行初始化赋值
+        word_count = {}
+        for k, v in word_dic.items():
+            word_count[k] = 0
+
+        # 对word_list在问句中出现的词频进行排序
+        for word in word_list:
+            for k, v in word_dic.items():
+                v = v.split(',')
+                if word in v:
+                    word_count[k] += 1
+        answer = sorted(word_count.items(), key=lambda word_count: word_count[1], reverse=True)
+        list_len = len(answer)
+        answer_4 = answer[0:4]
+        idex_list = []
+        for i in answer_4:
+            idex_list.append(i[0])
+
+        # ans = df[df.index == id]
+        df_dict = df.to_dict(orient='index')
+
+        id_list = []
+        answer_list = []
+        question_list = []
+        answer_dic = {}
+        question_dic = {}
+
+        for i in idex_list:
+            id_dic = df_dict[i]
+            id_list.append(id_dic['id'])
+            answer_list.append(id_dic['answer'])
+            question_list.append(id_dic['class4'])
+            answer_dic[id_dic['id']] = id_dic['answer']
+            question_dic[id_dic['id']] = id_dic['class4']
+
+        return answer_dic, question_dic, list_len
 

@@ -6,7 +6,7 @@
           content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scale=no"/>
     <meta name="format-detection" content="telephpne=no"/>
     <meta name="format-detection" content="email=no"/>
-    <title>税务咨询</title>
+    <title>GISAI</title>
     <link rel="stylesheet" href="/static/csswx/style.css"/>
     <link rel="stylesheet" href="/static/csswx/meng.css"/>
     <link rel="stylesheet" href="/static/csswx/normalize.css"/>
@@ -102,12 +102,12 @@
     function send_init(msg) {
         console.log($("#msg").val());//b不能注释掉，注释掉有问题。
         $.ajax({
-            url: "/talk/",
+            url: "/sources/query_wechat/",
             type: 'POST',
             data: {"msg":msg},
             dataType: 'json',
             error: function (XMLHttpRequest, textStatus, errorThrown) {
-                showAnswerMsg("网络连接错误123");
+                showAnswerMsg("网络连接错误哦哦哦");
             },
             success: function (result) {
                 showAnswerMsg(result.data);
