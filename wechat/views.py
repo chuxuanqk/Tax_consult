@@ -10,8 +10,8 @@ import logging
 import hashlib
 import pandas as pd
 import xml.etree.ElementTree as ET
-from zhon.hanzi import punctuation   #中文标点符号
 
+from .models import handler_data
 from utils.tuling import TL
 
 from django.views import View
@@ -20,6 +20,8 @@ from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 
+#在服务器启动的时候进行好分词
+word_dic, df_dict = handler_data()
 
 # django默认开启csrf防护，这里使用@csrf_exempt去掉防护
 @csrf_exempt
@@ -212,7 +214,6 @@ class Get_talkView_old(View):
         source = request.POST.get('msg')
         num_id=request.POST.get('num_id',-1)
 
-
         list_count, list_dic = self.talk_query(source)
 
         print("成功了!!!!!!!!!!!!!!!!!!!")
@@ -300,6 +301,7 @@ class Get_talkView(View):
                 list_res = '<br>'.join(list_res)
 
             else:
+                # 图灵
                 list_res = TL(source)
                 print(list_res)
         else:
@@ -312,7 +314,6 @@ class Get_talkView(View):
         }
         return JsonResponse(rew, content_type='application/json')
 
-
     def search_id(self, num_id):
         sql_asks = "select * from 'asks_answer' where id={id}".format(id=num_id)
         df = pd.read_sql_query(sql_asks, connection)
@@ -322,31 +323,12 @@ class Get_talkView(View):
 
         return answer
 
-
     def search(self,question):
-        # jieba分词
+        # jieba分词,处理输入的question
         question = re.sub(r'[%s]+' % string.punctuation, '', question)
-        sql_asks = "select * from 'asks_answer'"
-        df = pd.read_sql_query(sql_asks, connection)
-        df = df[df['part'] == '0']
         seg_list = jieba.cut_for_search(question)  # 搜索引擎模式
         word = ",".join(seg_list)
         word_list = word.split(',')
-
-        # 获取class4的字典，keys: indexs, values: questions
-        class4_dic = {}
-        class4 = df['class4']
-        class4_dic = class4.to_dict()
-        word_dic = {}
-        # jieba分词，获得分词字典,
-        start_time = time.time()
-        for k, v in class4_dic.items():
-            v = re.sub(r'[%s]+' % punctuation, '', v)
-            seg_list = jieba.cut_for_search(v)
-            word = ','.join(seg_list)
-            word_dic[k] = word
-        end_time = time.time()
-        print("========%s" % (end_time-start_time))
 
         # 对word_count进行初始化赋值
         word_count = {}
@@ -359,15 +341,13 @@ class Get_talkView(View):
                 v = v.split(',')
                 if word in v:
                     word_count[k] += 1
+
         answer = sorted(word_count.items(), key=lambda word_count: word_count[1], reverse=True)
         list_len = len(answer)
         answer_4 = answer[0:4]
         idex_list = []
         for i in answer_4:
             idex_list.append(i[0])
-
-        # ans = df[df.index == id]
-        df_dict = df.to_dict(orient='index')
 
         id_list = []
         answer_list = []
@@ -384,4 +364,5 @@ class Get_talkView(View):
             question_dic[id_dic['id']] = id_dic['class4']
 
         return answer_dic, question_dic, list_len
+
 

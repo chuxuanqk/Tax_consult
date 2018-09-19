@@ -3,12 +3,34 @@ __author__ = 'Saber'
 __date__ = '18/9/18 下午1:48'
 
 import json
+import requests
 import urllib.request
 
 api_url = "http://openapi.tuling123.com/openapi/api/v2"
 # text_input = input('我：')
+# 使用前请先前往 http://www.tuling123.com/register/index.jhtml
+# 申请 API key 谢谢
+# 另外需要 requests 支持
+# 修改成调用图灵官方接口
+url = 'http://www.tuling123.com/openapi/api'
+apikey = '308ea23fe1254113aad1017164274a84'
+
+#使用初版api
+def tuling(content):
+    querystring = {
+        "key": apikey,
+        "info": content,
+    }
+
+    response = requests.request("GET", url, params=querystring)
+
+    response_json = response.json()
+    msg = response_json.get('text')
+
+    return msg
 
 
+# 使用V2版api
 def TL(msg):
     req = {
         "perception":
@@ -52,4 +74,5 @@ def TL(msg):
 
 
 if __name__ == '__main__':
-    text = TL()
+    text = tuling("hello")
+    print(text)

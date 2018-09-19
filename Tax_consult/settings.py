@@ -131,30 +131,51 @@ else:
     STATIC_ROOT = "static"
 
 
-# 日志模块
+# 日志模块,LOGGING定义一个字典对日志模块进行配置
 LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'formatters': {
-        'verbose': {'format': '%(levelname)s %(asctime)s %(module)s %(lineno)d %(message)s'},
+    'version': 1,   #日志版本
+    'disable_existing_loggers': False,      #True: disable原有日志相关配置
+    'formatters': {   #日志格式
+        'verbose': {  #详细格式
+            'format': '%(levelname)s %(asctime)s %(module)s  %(process)d %(thread)d %(message)s'
+        },
+        'simple': {  #简单格式
+            'format': '%(levelname)s %(message)s'
+        }
+    },
+    'filters': {  #日志过滤器
+        # 'special': {  #特殊过滤器，替换foo成bar，可以自己配置
+        #     '()': 'project.logging.SpecialFilter',
+        #     'foo': 'bar',
+        # },
+        'require_debug_true': {#是否支持DEBUG级别日志过滤
+            '()': 'django.utils.log.RequireDebugTrue',
+        }
     },
 
-    'handlers': {
+    'handlers': {  #日志handlers
         # 文件流输出
-        'file': {
+        'file': {  #文件handler
             'level': 'ERROR',
             'class': 'logging.handlers.RotatingFileHandler',
             # 日志文件位置
             'filename': os.path.join(os.path.dirname(BASE_DIR), "Tax_consult/logs/weixin.log"),
             'maxBytes': 300 * 1024 * 1024,
             'backupCount': 10,
-            'formatter': 'verbose'
+            'formatter': 'verbose'   # ERROR级别以上的日志都要以verbose格式输出到文件中
         },
+        'console':{   #控制器handler，INFO级别以上的日志都要Simple格式输出到控制台
+            'level': 'INFO',
+            'filters':['require_debug_true'],
+            'class':  'logging.StreamHandler',
+            'formatter': 'simple',
+
+        }
     },
     'loggers': {
         'django': {
             # 定义了⼀个名为django的⽇志器处理器
-            'handlers': ['file'],
+            'handlers': ['file','console'],
             # 是否允许向上级别冒泡
             'propagate': True,
         },
