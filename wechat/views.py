@@ -275,37 +275,9 @@ class Get_talkView(View):
 
     def post(self, request):
         source = request.POST.get('msg')
-        num_id=request.POST.get('num_id','-1')
+        num_id = request.POST.get('num_id','-1')
 
-        content = []
-        list_res = []
-
-        if num_id == '-1':
-            answer_dic, question_dic, list_len = self.search(source)
-            if list_len == 1:
-                head = "以下是您咨询的答案:"
-                list_res.append(head)
-                for k, v in answer_dic.items():
-                    content = v
-                list_res.append(content)
-                list_res = '<br>'.join(list_res)
-            elif list_len >1:
-                head = "以下是您可能想要咨询的问题:"
-                list_res.append(head)
-                for k, v in question_dic.items():
-                    link = "<a href='#' onclick=showAsk('{id}','{question}')>{question_1}</a>" \
-                        .format(question=v, id=k, question_1=v)
-                    content.append(link)
-                list = '<br>'.join(content)
-                list_res.append(list)
-                list_res = '<br>'.join(list_res)
-
-            else:
-                # 图灵
-                list_res = TL(source)
-                print(list_res)
-        else:
-            list_res = self.search_id(num_id)
+        list_res = self.get_list_res(num_id, source)
 
         rew = {
             'code': '200',
@@ -323,7 +295,7 @@ class Get_talkView(View):
 
         return answer
 
-    def search(self,question):
+    def search(self,question, number=4):
         # jieba分词,处理输入的question
         question = re.sub(r'[%s]+' % string.punctuation, '', question)
         seg_list = jieba.cut_for_search(question)  # 搜索引擎模式
@@ -343,11 +315,11 @@ class Get_talkView(View):
                     word_count[k] += 1
 
         answer = sorted(word_count.items(), key=lambda word_count: word_count[1], reverse=True)
-        list_len = len(answer)
-        answer_4 = answer[0:4]
         idex_list = []
-        for i in answer_4:
-            idex_list.append(i[0])
+
+        for value in answer[:number]:
+            if value[1] != 0:
+                idex_list.append(value[0])
 
         id_list = []
         answer_list = []
@@ -363,6 +335,37 @@ class Get_talkView(View):
             answer_dic[id_dic['id']] = id_dic['answer']
             question_dic[id_dic['id']] = id_dic['class4']
 
-        return answer_dic, question_dic, list_len
+        return answer_dic, question_dic, question_list
 
+    def get_list_res(self, num_id, source):
 
+        if num_id == '-1':
+            answer_dic, question_dic, question_list = self.search(source)
+            list_len = len(question_list)
+
+            content = []
+            list_res = []
+            if list_len == 1:
+                head = "以下是您咨询的答案:"
+                list_res.append(head)
+                for k, v in answer_dic.items():
+                    content = v
+                list_res.append(content)
+                list_res = '<br>'.join(list_res)
+            elif list_len > 1:
+                head = "以下是您可能想要咨询的问题:"
+                list_res.append(head)
+                for k, v in question_dic.items():
+                    link = "<a href='#' onclick=showAsk('{id}','{question}')>{question_1}</a>" \
+                        .format(question=v, id=k, question_1=v)
+                    content.append(link)
+                list = '<br>'.join(content)
+                list_res.append(list)
+                list_res = '<br>'.join(list_res)
+            else:
+                # 图灵
+                list_res = TL(source)
+        else:
+            list_res = self.search_id(num_id)
+
+        return list_res

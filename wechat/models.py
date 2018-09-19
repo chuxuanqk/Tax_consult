@@ -19,6 +19,7 @@ def handler_data():
     class4_dic = class4.to_dict()
     word_dic = {}
     df_dict = df.to_dict(orient='index')
+
     # jieba分词，获得分词字典,
     for k, v in class4_dic.items():
         v = re.sub(r'[%s]+' % punctuation, '', v)

@@ -253,7 +253,7 @@ function send(num_id,msg) {
         data: {"msg": msg,"num_id":num_id},
         dataType: 'json',
         error: function (XMLHttpRequest, textStatus, errorThrown) {
-            showAnswerMsg("网络连接错误哦哦哦");
+            showAnswerMsg("网络连接错误");
         },
         success: function (result) {
             showAnswerMsg(result.data);
