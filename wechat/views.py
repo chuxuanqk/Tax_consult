@@ -1,7 +1,6 @@
 
 
 # Create your views here.
-import json
 import re
 import time
 import jieba
@@ -12,7 +11,7 @@ import pandas as pd
 import xml.etree.ElementTree as ET
 
 from .models import handler_data
-from utils.tuling import TL
+from .tuling import TL
 
 from django.views import View
 from django.db import connection
