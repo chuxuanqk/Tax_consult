@@ -10,7 +10,7 @@ import hashlib
 import pandas as pd
 import xml.etree.ElementTree as ET
 
-from .models import handler_data
+from .models import *
 from .tuling import TL
 
 from django.views import View
@@ -21,6 +21,8 @@ from django.views.decorators.csrf import csrf_exempt
 
 #在服务器启动的时候进行好分词
 word_dic, df_dict = handler_data()
+
+logger = logging.getLogger(__name__)
 
 # django默认开启csrf防护，这里使用@csrf_exempt去掉防护
 @csrf_exempt
@@ -56,8 +58,20 @@ def weixin_main(request):
             return HttpResponse(echostr)
     # 微信正常的收发消息是用POST方法。
     else:
+
         othercontent = autoreply(request)
         return HttpResponse(othercontent)
+
+
+class Tax_Bot(View):
+    """
+    网页版聊天机器人
+    """
+    def post(self, request):
+
+        content = autoreply(request)
+        return HttpResponse(content)
+
 
 
 # 微信服务器推送消息是xml的，根据利用ElementTree来解析出的不同xml内容返回不同的回复信息，
@@ -65,20 +79,20 @@ def weixin_main(request):
 def autoreply(request):
     try:
         webData = request.body
+
         xmlData = ET.fromstring(webData)
 
-        msg_type = xmlData.find('MsgType').text
         ToUserName = xmlData.find('ToUserName').text
         FromUserName = xmlData.find('FromUserName').text
         CreateTime = xmlData.find('CreateTime').text
-        MsgType = xmlData.find('MsgType').text
+        msg_type = xmlData.find('MsgType').text
         MsgId = xmlData.find('MsgId').text
-        Content = xmlData.find('Content').text
 
         toUser = FromUserName
         fromUser = ToUserName
 
         if msg_type == 'text':
+            Content = xmlData.find('Content').text
             ask_message = Content
             list_dic = []
             list_dic = query_answer(ask_message)
@@ -88,6 +102,15 @@ def autoreply(request):
             replyMsg = TextMsg(toUser, fromUser, message)
             print("成功了!!!!!!!!!!!!!!!!!!!")
             print(replyMsg)
+            return replyMsg.send()
+
+        elif msg_type == 'image':
+            PicUrl = xmlData.find('PicUrl').text
+            MediaId = xmlData.find('MediaId').text
+            message = 'hello'
+
+            replyMsg = TextMsg(toUser, fromUser, message)
+
             return replyMsg.send()
 
     except Exception as Argment:
@@ -206,8 +229,8 @@ class Get_talkView_old(View):
     """
 
     def get(self, request):
-        print('hello')
-        return render(request, 'talk.html', {})
+        msg = "您好！税务智能客服很高兴为您服务，请问您有什么问题需要咨询的？"
+        return render(request, 'talk.html', {'msg':msg})
 
     def post(self, request):
         source = request.POST.get('msg')
@@ -296,10 +319,15 @@ class Get_talkView(View):
 
     def search(self,question, number=4):
         # jieba分词,处理输入的question
-        question = re.sub(r'[%s]+' % string.punctuation, '', question)
-        seg_list = jieba.cut_for_search(question)  # 搜索引擎模式
-        word = ",".join(seg_list)
-        word_list = word.split(',')
+        # question = re.sub(r'[%s]+' % string.punctuation, '', question)
+        # seg_list = jieba.cut_for_search(question)  # 搜索引擎模式
+        # word = ",".join(seg_list)
+        # word_list = word.split(',')
+        question = chinese_word_cut(question)
+
+        logger.error(question)
+
+        word_list = question.split(' ')
 
         # 对word_count进行初始化赋值
         word_count = {}

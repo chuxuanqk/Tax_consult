@@ -41,9 +41,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'wechat',
+    # 'corsheaders',
 ]
 
 MIDDLEWARE = [
+    # 'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -53,6 +55,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CORS_ORIGIN_ALLOW_ALL=True
 ROOT_URLCONF = 'Tax_consult.urls'
 
 TEMPLATES = [
@@ -109,15 +112,15 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-hans'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
@@ -150,7 +153,7 @@ LOGGING = {
         #     '()': 'project.logging.SpecialFilter',
         #     'foo': 'bar',
         # },
-        'require_debug_true': {#是否支持DEBUG级别日志过滤
+        'require_debug_true': {# DEBUG级别日志过滤
             '()': 'django.utils.log.RequireDebugTrue',
         }
     },
@@ -167,7 +170,7 @@ LOGGING = {
             'formatter': 'verbose'   # ERROR级别以上的日志都要以verbose格式输出到文件中
         },
         'console':{   #控制器handler，INFO级别以上的日志都要Simple格式输出到控制台
-            'level': 'INFO',
+            'level': 'DEBUG',
             'filters':['require_debug_true'],
             'class':  'logging.StreamHandler',
             'formatter': 'simple',

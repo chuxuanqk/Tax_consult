@@ -12,6 +12,7 @@ from zhon.hanzi import punctuation   #中文标点符号
 def handler_data():
     sql_asks = "select * from 'asks_answer'"
     df = pd.read_sql_query(sql_asks, connection)
+    df.drop_duplicates("class4",inplace=True)     # 使用pandas丢弃重复值
     df = df[df['part'] == '0']
     # 获取class4的字典，keys: indexs, values: questions
     class4_dic = {}
@@ -28,3 +29,30 @@ def handler_data():
         word_dic[k] = word
 
     return word_dic, df_dict
+
+
+# 从中文停用词表里面，把停用词作为列表格式保存并返回, 使用的哈工大停用词表文件
+def get_custom_stopwords(stop_words_file):
+    with open(stop_words_file) as f:
+        stopwords = f.read()
+    stopwords_list = stopwords.split('\n')
+    custom_stopwords_list = [i for i in stopwords_list]
+    return custom_stopwords_list
+
+
+def pd_search(sql="select * from 'asks_answer'"):
+    df = pd.read_sql_query(sql, connection)
+
+    return df
+
+
+def chinese_word_cut(mytext):
+    """
+    对文本进行切词，并过滤掉中文字符和停用词。
+    """
+    stop_words_file = 'stopwords.txt'
+    stopwords = get_custom_stopwords(stop_words_file)
+
+    cutted_word = re.sub(r'[%s]+' % punctuation, '',
+                         " ".join([i for i in jieba.cut_for_search(mytext) if i not in stopwords]))
+    return cutted_word

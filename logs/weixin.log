@@ -1,0 +1,96 @@
+ERROR 2018-09-25 14:33:05,331 exception  6357 123145468059648 Internal Server Error: /wechat/
+Traceback (most recent call last):
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 61, in weixin_main
+    othercontent = autoreply(request)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 88, in autoreply
+    Content = xmlData.find('Content').text
+AttributeError: 'NoneType' object has no attribute 'text'
+ERROR 2018-09-25 14:33:05,341 basehttp  6357 123145468059648 "POST /wechat/?signature=7a8dfc41f2eb735ce14bf271ec4ad3525e09d40f&timestamp=1537857184&nonce=414980989&openid=oK2AW50x6twY5aMN0a5Jzxyl1Mqg HTTP/1.1" 500 27
+ERROR 2018-09-25 14:33:50,531 exception  6369 123145468354560 Internal Server Error: /wechat/
+Traceback (most recent call last):
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 61, in weixin_main
+    othercontent = autoreply(request)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 88, in autoreply
+    Content = xmlData.find('Content').text
+AttributeError: 'NoneType' object has no attribute 'text'
+ERROR 2018-09-25 14:33:50,540 basehttp  6369 123145468354560 "POST /wechat/?signature=54caba57ced35a80756ee6cbae3d6d05728f0697&timestamp=1537857229&nonce=645103576&openid=oK2AW50x6twY5aMN0a5Jzxyl1Mqg HTTP/1.1" 500 27
+ERROR 2018-09-25 14:41:07,043 exception  6369 123145468354560 Internal Server Error: /wechat/
+Traceback (most recent call last):
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 61, in weixin_main
+    othercontent = autoreply(request)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 88, in autoreply
+    Content = xmlData.find('Content').text
+AttributeError: 'NoneType' object has no attribute 'text'
+ERROR 2018-09-25 14:41:07,047 basehttp  6369 123145468354560 "POST /wechat/?signature=a009599a325aa0c6bf36e2140e4f47437e2d61de&timestamp=1537857666&nonce=596692879&openid=oK2AW50x6twY5aMN0a5Jzxyl1Mqg HTTP/1.1" 500 27
+ERROR 2018-09-25 14:41:29,921 exception  6369 123145468354560 Internal Server Error: /wechat/
+Traceback (most recent call last):
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 61, in weixin_main
+    othercontent = autoreply(request)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 88, in autoreply
+    Content = xmlData.find('Content').text
+AttributeError: 'NoneType' object has no attribute 'text'
+ERROR 2018-09-25 14:41:29,923 basehttp  6369 123145468354560 "POST /wechat/?signature=8028acd7b864cb66bc39f6e436f5fe62ea14ba2f&timestamp=1537857689&nonce=1243180165&openid=oK2AW50x6twY5aMN0a5Jzxyl1Mqg HTTP/1.1" 500 27
+ERROR 2018-09-25 14:42:15,934 exception  6404 123145450971136 Internal Server Error: /wechat/
+Traceback (most recent call last):
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 61, in weixin_main
+    othercontent = autoreply(request)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 88, in autoreply
+    Content = xmlData.find('Content').text
+AttributeError: 'NoneType' object has no attribute 'text'
+ERROR 2018-09-25 14:42:15,945 basehttp  6404 123145450971136 "POST /wechat/?signature=a6d51afa6297bf6ee9a195b61850317e81ec474c&timestamp=1537857734&nonce=1223625648&openid=oK2AW50x6twY5aMN0a5Jzxyl1Mqg HTTP/1.1" 500 27
+ERROR 2018-09-25 14:43:04,568 exception  6426 123145538285568 Internal Server Error: /wechat/
+Traceback (most recent call last):
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 61, in weixin_main
+    othercontent = autoreply(request)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 88, in autoreply
+    Content = xmlData.find('Content').text
+AttributeError: 'NoneType' object has no attribute 'text'
+ERROR 2018-09-25 14:43:04,617 basehttp  6426 123145538285568 "POST /wechat/?signature=ee36a9d8f0ffc553e638d43fd40ec38c70a71551&timestamp=1537857783&nonce=1048233535&openid=oK2AW50x6twY5aMN0a5Jzxyl1Mqg HTTP/1.1" 500 27
