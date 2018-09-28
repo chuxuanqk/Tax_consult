@@ -22,7 +22,7 @@ from django.views.decorators.csrf import csrf_exempt
 #在服务器启动的时候进行好分词
 word_dic, df_dict = handler_data()
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("django")
 
 # django默认开启csrf防护，这里使用@csrf_exempt去掉防护
 @csrf_exempt
@@ -323,6 +323,8 @@ class Get_talkView(View):
         # seg_list = jieba.cut_for_search(question)  # 搜索引擎模式
         # word = ",".join(seg_list)
         # word_list = word.split(',')
+
+        # 提问处理
         question = chinese_word_cut(question)
 
         logger.error(question)

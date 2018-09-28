@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d8ad585-bb0f-47f7-8478-9c9f6d955af2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/mysite_nginx.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysite_uwsgi.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stopwords.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uwsgi_params" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tax_consult/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tax_consult/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/weixin.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/weixin.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/talk.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/talk.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/wechat/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wechat/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/wechat/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,11 +39,20 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tax_consult/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="45" selection-start-line="45" selection-end-line="45" />
+            <state relative-caret-position="1151">
+              <caret line="187" column="1" lean-forward="true" selection-start-line="187" selection-start-column="1" selection-end-line="187" selection-end-column="1" />
               <folding>
                 <element signature="e#316#325#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="weixin.log" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/logs/weixin.log">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -67,11 +69,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file:///Applications/anaconda3/lib/python3.6/logging/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="1324" column="8" selection-start-line="1324" selection-start-column="8" selection-end-line="1324" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wechat/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="326" lean-forward="true" selection-start-line="326" selection-end-line="326" />
+            <state relative-caret-position="-5491">
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
               <folding>
                 <element signature="e#28#37#0" expanded="true" />
               </folding>
@@ -82,20 +93,11 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wechat/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="42" column="10" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
+            <state relative-caret-position="174">
+              <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file:///Applications/anaconda3/lib/python3.6/logging/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="33912">
-              <caret line="1886" column="9" selection-start-line="1886" selection-start-column="9" selection-end-line="1886" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -142,14 +144,14 @@
         <option value="$PROJECT_DIR$/Tax_consult/urls.py" />
         <option value="$PROJECT_DIR$/utils/tuling.py" />
         <option value="$PROJECT_DIR$/static/jswx/talkb73c.js" />
-        <option value="$PROJECT_DIR$/logs/weixin.log" />
         <option value="$PROJECT_DIR$/uwsgi_params" />
         <option value="$PROJECT_DIR$/mysite_nginx.conf" />
         <option value="$PROJECT_DIR$/mysite_uwsgi.ini" />
-        <option value="$PROJECT_DIR$/Tax_consult/settings.py" />
         <option value="$PROJECT_DIR$/templates/talk.html" />
-        <option value="$PROJECT_DIR$/wechat/views.py" />
         <option value="$PROJECT_DIR$/wechat/models.py" />
+        <option value="$PROJECT_DIR$/logs/weixin.log" />
+        <option value="$PROJECT_DIR$/wechat/views.py" />
+        <option value="$PROJECT_DIR$/Tax_consult/settings.py" />
       </list>
     </option>
   </component>
@@ -163,10 +165,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="21" />
-    <option name="y" value="45" />
-    <option name="width" value="1259" />
-    <option name="height" value="681" />
+    <option name="x" value="130" />
+    <option name="y" value="34" />
+    <option name="width" value="1088" />
+    <option name="height" value="642" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -526,21 +528,28 @@
       <option name="project" value="LOCAL" />
       <updated>1537362639395</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="&quot;在models.py 中添加停用词&quot;">
+      <created>1537953515133</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1537953515133</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="21" y="45" width="1259" height="681" extended-state="0" />
+    <frame x="96" y="23" width="1237" height="725" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.15390174" side_tool="true" weight="0.43134087" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.8713873" visible="true" weight="0.15924658" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8713873" weight="0.25832012" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49918434" weight="0.3279483" />
       <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.49918434" weight="0.32956383" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.84609824" weight="0.26785713" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16023007" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16317992" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32940108" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -555,6 +564,29 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.31301484" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16317992" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49918434" weight="0.3279483" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8713873" visible="true" weight="0.27575278" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.31301484" />
+      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49918434" weight="0.32956383" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.7358491" weight="0.26298702" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32940108" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.84609824" weight="0.26785713" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.15390174" side_tool="true" weight="0.43134087" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -614,7 +646,8 @@
     <MESSAGE value="&quot;add&quot;" />
     <MESSAGE value="&quot;add sys&quot;" />
     <MESSAGE value="&quot;fix&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;fix&quot;" />
+    <MESSAGE value="&quot;在models.py 中添加停用词&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;在models.py 中添加停用词&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -921,13 +954,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///Applications/anaconda3/lib/python3.6/logging/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33912">
-          <caret line="1886" column="9" selection-start-line="1886" selection-start-column="9" selection-end-line="1886" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tax_consult/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -963,18 +989,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logs/weixin.log">
+    <entry file="file://$PROJECT_DIR$/wechat/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1331" />
+        <state relative-caret-position="174">
+          <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tax_consult/settings.py">
+    <entry file="file:///Applications/anaconda3/lib/python3.6/logging/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
-          <folding>
-            <element signature="e#316#325#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="48">
+          <caret line="1324" column="8" selection-start-line="1324" selection-start-column="8" selection-end-line="1324" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -988,20 +1016,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wechat/models.py">
+    <entry file="file://$PROJECT_DIR$/logs/weixin.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="42" column="10" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
+        <state relative-caret-position="72">
+          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tax_consult/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1151">
+          <caret line="187" column="1" lean-forward="true" selection-start-line="187" selection-start-column="1" selection-end-line="187" selection-end-column="1" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#316#325#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wechat/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="326" lean-forward="true" selection-start-line="326" selection-end-line="326" />
+        <state relative-caret-position="-5491">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="e#28#37#0" expanded="true" />
           </folding>
