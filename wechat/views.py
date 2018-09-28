@@ -317,17 +317,11 @@ class Get_talkView(View):
 
         return answer
 
-    def search(self,question, number=4):
-        # jieba分词,处理输入的question
-        # question = re.sub(r'[%s]+' % string.punctuation, '', question)
-        # seg_list = jieba.cut_for_search(question)  # 搜索引擎模式
-        # word = ",".join(seg_list)
-        # word_list = word.split(',')
-
+    def search(self, question, number=4):
         # 提问处理
-        question, str_len = chinese_word_cut(question)
+        question = chinese_word_cut(question)
 
-        logger.info("{}".format(question))
+        logger.info("搜索关键词：{}".format(question))
 
         word_list = question.split(' ')
 
@@ -339,7 +333,7 @@ class Get_talkView(View):
         # 对word_list在问句中出现的词频进行排序
         for word in word_list:
             for k, v in word_dic.items():
-                v = v.split(',')
+                v = v.split(' ')
                 if word in v:
                     word_count[k] += 1
 
@@ -364,6 +358,7 @@ class Get_talkView(View):
             answer_dic[id_dic['id']] = id_dic['answer']
             question_dic[id_dic['id']] = id_dic['class4']
 
+        logger.info("答案：{}".format(answer_dic))
         return answer_dic, question_dic, question_list
 
     def get_list_res(self, num_id, source):

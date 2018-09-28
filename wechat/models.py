@@ -19,6 +19,11 @@ def handler_data():
     df = pd.read_sql_query(sql_asks, connection)
     df.drop_duplicates("class4", inplace=True)     # 使用pandas丢弃重复值
     df = df[df['part'] == '0']
+
+    # 停用词
+    stop_words_file = 'stopwords.txt'
+    stopwords = get_custom_stopwords(stop_words_file)
+
     # 获取class4的字典，keys: indexs, values: questions
     class4_dic = {}
     class4 = df['class4']
@@ -29,10 +34,14 @@ def handler_data():
     # jieba分词，获得分词字典,
     for k, v in class4_dic.items():
         v = re.sub(r'[%s]+' % punctuation, '', v)         # 去除中文字符
-        v = re.sub(r'[%s]+' % string.punctuation, '', v)  # 去除英文字符
-        seg_list = jieba.cut_for_search(v)
-        word = ','.join(seg_list)
-        word_dic[k] = word
+        # v = re.sub(r'[%s]+' % string.punctuation, '', v)  # 去除英文字符
+        # seg_list = jieba.cut_for_search(v)
+        # word_cut = ','.join(seg_list)
+
+        word_cut = re.sub(r'[%s]+' % string.punctuation, '',
+                             " ".join([i for i in jieba.cut_for_search(v) if i not in stopwords]))  # 去除英文字符
+
+        word_dic[k] = word_cut
 
     return word_dic, df_dict
 
@@ -62,5 +71,4 @@ def chinese_word_cut(mytext):
     cutted_word = re.sub(r'[%s]+' % punctuation, '',
                          " ".join([i for i in jieba.cut_for_search(mytext) if i not in stopwords]))
 
-    str_len = len(cutted_word)
-    return cutted_word, str_len
+    return cutted_word

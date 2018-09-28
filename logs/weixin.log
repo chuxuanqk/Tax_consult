@@ -1,8 +1,66 @@
-INFO 2018-09-26 18:13:06,262 basehttp  9548 123145363668992 "POST /talk/ HTTP/1.1" 200 1333
-INFO "POST /talk/ HTTP/1.1" 200 1333
-INFO "POST /talk/ HTTP/1.1" 200 1333
-ERROR 攀枝 攀枝花 纳税 纳税人 申请 纳税 信用 等级 信用等级
-INFO "POST /talk/ HTTP/1.1" 200 1333
-ERROR 攀枝 攀枝花 纳税 纳税人 申请 纳税 信用 等级 信用等级
-ERROR 攀枝 攀枝花 纳税 纳税人 申请 纳税 信用 等级 信用等级
-ERROR 2018-09-26 18:51:29,236 views  9857 123145515335680 攀枝 攀枝花 纳税 纳税人 申请 纳税 信用 等级 信用等级
+ERROR 2018-09-28 16:26:16,534 exception  2825 123145547489280 135 Internal Server Error: /talk/
+Traceback (most recent call last):
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 302, in post
+    list_res = self.get_list_res(num_id, source)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 367, in get_list_res
+    answer_dic, question_dic, question_list = self.search(source)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 322, in search
+    question, str_len = chinese_word_cut(question)
+ValueError: too many values to unpack (expected 2)
+ERROR 2018-09-28 16:26:16,587 basehttp  2825 123145547489280 124 "POST /talk/ HTTP/1.1" 500 27
+ERROR 2018-09-28 16:26:18,587 exception  2825 123145547489280 135 Internal Server Error: /talk/
+Traceback (most recent call last):
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 302, in post
+    list_res = self.get_list_res(num_id, source)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 367, in get_list_res
+    answer_dic, question_dic, question_list = self.search(source)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 322, in search
+    question, str_len = chinese_word_cut(question)
+ValueError: not enough values to unpack (expected 2, got 0)
+ERROR 2018-09-28 16:26:18,594 basehttp  2825 123145547489280 124 "POST /talk/ HTTP/1.1" 500 27
+ERROR 2018-09-28 16:26:21,265 exception  2825 123145547489280 135 Internal Server Error: /talk/
+Traceback (most recent call last):
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Applications/anaconda3/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 302, in post
+    list_res = self.get_list_res(num_id, source)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 367, in get_list_res
+    answer_dic, question_dic, question_list = self.search(source)
+  File "/Users/mq/Desktop/work_Pro/Code/Project/WeChat/Tax_consult/wechat/views.py", line 322, in search
+    question, str_len = chinese_word_cut(question)
+ValueError: too many values to unpack (expected 2)
+ERROR 2018-09-28 16:26:21,272 basehttp  2825 123145547489280 124 "POST /talk/ HTTP/1.1" 500 27
