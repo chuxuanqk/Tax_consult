@@ -325,9 +325,9 @@ class Get_talkView(View):
         # word_list = word.split(',')
 
         # 提问处理
-        question = chinese_word_cut(question)
+        question, str_len = chinese_word_cut(question)
 
-        logger.error(question)
+        logger.info("{}".format(question))
 
         word_list = question.split(' ')
 

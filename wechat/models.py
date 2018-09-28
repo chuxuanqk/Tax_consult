@@ -6,13 +6,18 @@ import jieba
 import pandas as pd
 from django.db import connection
 from zhon.hanzi import punctuation   #中文标点符号
+import string
 
 # Create your models here.
 
 def handler_data():
+    """
+    建立分词字典
+    :return:
+    """
     sql_asks = "select * from 'asks_answer'"
     df = pd.read_sql_query(sql_asks, connection)
-    df.drop_duplicates("class4",inplace=True)     # 使用pandas丢弃重复值
+    df.drop_duplicates("class4", inplace=True)     # 使用pandas丢弃重复值
     df = df[df['part'] == '0']
     # 获取class4的字典，keys: indexs, values: questions
     class4_dic = {}
@@ -23,7 +28,8 @@ def handler_data():
 
     # jieba分词，获得分词字典,
     for k, v in class4_dic.items():
-        v = re.sub(r'[%s]+' % punctuation, '', v)
+        v = re.sub(r'[%s]+' % punctuation, '', v)         # 去除中文字符
+        v = re.sub(r'[%s]+' % string.punctuation, '', v)  # 去除英文字符
         seg_list = jieba.cut_for_search(v)
         word = ','.join(seg_list)
         word_dic[k] = word
@@ -55,4 +61,6 @@ def chinese_word_cut(mytext):
 
     cutted_word = re.sub(r'[%s]+' % punctuation, '',
                          " ".join([i for i in jieba.cut_for_search(mytext) if i not in stopwords]))
-    return cutted_word
+
+    str_len = len(cutted_word)
+    return cutted_word, str_len

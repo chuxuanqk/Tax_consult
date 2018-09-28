@@ -142,10 +142,11 @@ LOGGING = {
     'disable_existing_loggers': False,      #True: disable原有日志相关配置
     'formatters': {   #日志格式
         'verbose': {  #详细格式
-            'format': '%(levelname)s %(asctime)s %(module)s  %(process)d %(thread)d %(message)s'
+            'format': '%(levelname)s %(asctime)s %(module)s  %(process)d %(thread)d %(lineno)s %(message)s'
         },
         'simple': {  #简单格式
-            'format': '%(levelname)s %(message)s'
+            # 'format': '%(levelname)s %(pathname)s %(lineno)s %(message)s'
+            'format': '%(levelname)s  %(filename)s line:%(lineno)s %(message)s'
         }
     },
     'filters': {  #日志过滤器
@@ -170,8 +171,8 @@ LOGGING = {
             'formatter': 'verbose'   # ERROR级别以上的日志都要以verbose格式输出到文件中
         },
         'console':{   #控制器handler，INFO级别以上的日志都要Simple格式输出到控制台
-            'level': 'DEBUG',
-            'filters':['require_debug_true'],
+            'level': 'INFO',
+            # 'filters': ['require_debug_true'],
             'class':  'logging.StreamHandler',
             'formatter': 'simple',
 
@@ -180,7 +181,7 @@ LOGGING = {
     'loggers': {
         'django': {
             # 定义了⼀个名为django的⽇志器处理器
-            'handlers': ['file','console'],
+            'handlers': ['file', 'console'],
             # 是否允许向上级别冒泡
             'propagate': True,
         },
