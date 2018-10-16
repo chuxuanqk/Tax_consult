@@ -1,0 +1,158 @@
+
+
+
+<!DOCTYPE HTML>
+<html>
+
+<!-- Mirrored from dzswj.szds.gov.cn/wxswj/work/wxpt/wxpt10/index.jsp by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Oct 2018 03:09:41 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<title>个税计算器</title>
+
+<script type="text/javascript">	var wxpt = "/wxswj";
+</script>
+<meta
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;"
+	name="viewport" />
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="This is my page">
+<meta name="format-detection" content="telephone=no" />
+<link rel="stylesheet"
+	href="https://dzswj.szds.gov.cn/wxswj/work/wxpt/jquery/jquery.mobile-1.4.2.min.gzcss" />
+<link rel="stylesheet" href="https://dzswj.szds.gov.cn/wxswj/work/wxpt/public/css/wxpt.css" />
+<script src="https://dzswj.szds.gov.cn/wxswj/work/dcits/comm/jquery/jquery-1.8.0.min.gzjs"></script>
+<script src="https://dzswj.szds.gov.cn/wxswj/work/wxpt/jquery/jquery.mobile-1.4.2.min.gzjs"></script>
+<script src="https://dzswj.szds.gov.cn/wxswj/work/dcits/comm/comm.js"></script>
+<script src="/static/jswx/geshui.js?v=1539659399715"></script>
+<style type="text/css">
+.container{
+        width:100%;height:40px;
+    }
+.left{
+       width:48%;height:100%;border:1px solid #D3D3D3;padding-top: 10px;
+       float:left;
+   }
+</style>
+</head>
+
+<body>
+	    <div data-role="content" style='padding-top:0;'>  
+			<ul data-role="listview" id="listview">
+				<li data-role='list-divider' id="listdivider">个税计算器</li>
+			</ul>
+	    </div>
+	    <div class= "container">
+   		<div id="sgq" onclick="sgq()" class="left" align="center">税改前</div>
+    	<div id="sgh" onclick="sgh()" class="left" align="center">税改后</div>
+	</div>
+		<ul id="sgqView" data-role="listview"  style="margin: 5% 0px 0px 0px;padding:5px;border: 1px solid #D3D3D3;border-radius: 5px; background-color: white;">
+    	<table style="width:98%" align="center">
+    		<tr>
+    			<td nowrap="nowrap" align="rigth">税前月工资薪金：</td>
+    			<td colspan="2">
+    				<input type="text" name="sqygzxj" id="sqygzxj" value="" onkeyup="sqygzChange(this);">
+    			</td>
+    		</tr>
+    		<tr>
+    			<td nowrap="nowrap" align="rigth">是否外籍：</td>
+    			<td colspan="2">
+    				<select id="sfwj" name="sfwj" onchange="sfwjOnchange(this);">
+						<option value="10">否</option>
+						<option value="20">是</option>
+					</select>
+    			</td>
+    		</tr>
+    		<tr>
+    			<td nowrap="nowrap" align="rigth">费用扣除额：</td>
+    			<td colspan="2">
+    				<input type="text" name="fykce" id="fykce" value="3500" readonly="readonly">
+    			</td>
+    		</tr>
+    		<tr>
+    			<td nowrap="nowrap" align="rigth">社保公积金：</td>
+    			<td nowrap="nowrap">
+    				<input type="text" name="sbgjj" id="sbgjj" value="" onkeyup="sqygzChange2(this);">
+    			</td>
+    			<td nowrap="nowrap" style="width:80px;">
+    				<a href="javascript:void(0);" data-transition="pop" onclick="return updBl(this);" id="updBlsgq" style="text-decoration:none;">&nbsp;设置比例</a>
+    			</td>
+    		</tr>
+    		<tr>
+    			<td colspan="3" align="center">
+    				&nbsp;<span id="message" style="color:red; font-weight: bolder;"></span>
+    			</td>
+    		</tr>
+    		<tr>
+    			<td nowrap="nowrap" align="center" colspan="3">
+    					<button class="ui-btn-active" id="sgqjs" name="sgqjs" onclick="isValidate(this);">计算</button>
+    			</td>
+    		</tr>
+    		<tr>
+    			<td align="left" colspan="3">
+    				可根据实际情况调整社保公积金的比例进行个税计算，适用于2011年9月1日至2018年9月30日期间取得工资信息及计算，结果仅供参考。
+    			</td>
+    		</tr>
+    	</table>
+    	
+    	</ul>
+   
+	   <div id="sghdiv" style="display: none">
+	   		<ul id="sghView" data-role="listview"  style="margin: 5% 0px 0px 0px;padding:5px;border: 1px solid #D3D3D3;border-radius: 5px; background-color: white;">
+    	<table style="width:98%" align="center">
+    		<tr>
+    			<td nowrap="nowrap" align="rigth">税前月工资薪金：</td>
+    			<td colspan="2">
+    				<input type="text" name="sqygzxjSgh" id="sqygzxjSgh" value="" onkeyup="sqygzChange(this);">
+    			</td>
+    		</tr>
+    		<!--<tr>
+    			<td nowrap="nowrap" align="rigth">是否外籍：</td>
+    			<td colspan="2">
+    				<select id="sfwj" name="sfwj" onchange="sfwjOnchange(this);">
+						<option value="10">否</option>
+						<option value="20">是</option>
+					</select>
+    			</td>
+    		</tr>
+    		--><tr>
+    			<td nowrap="nowrap" align="rigth">费用扣除额：</td>
+    			<td colspan="2">
+    				<input type="text" name="fykceSgh" id="fykceSgh" value="5000" readonly="readonly">
+    			</td>
+    		</tr>
+    		<tr>
+    			<td nowrap="nowrap" align="rigth">社保公积金：</td>
+    			<td nowrap="nowrap">
+    				<input type="text" name="sbgjjSgh" id="sbgjjSgh" value="" onkeyup="sqygzChange2(this);">
+    			</td>
+    			<td nowrap="nowrap" style="width:80px;">
+    				<a href="javascript:void(0);" data-transition="pop" onclick="return updBl(this);" id="updBlsgh" style="text-decoration:none;">&nbsp;设置比例</a>
+    			</td>
+    		</tr>
+    		<tr>
+    			<td colspan="3" align="center">
+    				&nbsp;<span id="messageSgh" style="color:red; font-weight: bolder;"></span>
+    			</td>
+    		</tr>
+    		<tr>
+    			<td nowrap="nowrap" align="center" colspan="3">
+    					<button class="ui-btn-active" id="sghjs" name="sghjs" onclick="isValidate(this);">计算</button>
+    			</td>
+    		</tr>
+    		<tr>
+    			<td align="left" colspan="3">
+    				可根据实际情况调整社保公积金的比例进行个税计算，适用于2018年10月1日后取得工资信息及计算，结果仅供参考。
+    			</td>
+    		</tr>
+    	</table>
+    	
+    	</ul>
+	   </div>
+
+</body>
+
+<!-- Mirrored from dzswj.szds.gov.cn/wxswj/work/wxpt/wxpt10/index.jsp by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Oct 2018 03:09:42 GMT -->
+</html>

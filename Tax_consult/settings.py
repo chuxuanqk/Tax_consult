@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'wechat',
+    'Tax_cal',
     # 'corsheaders',
 ]
 
