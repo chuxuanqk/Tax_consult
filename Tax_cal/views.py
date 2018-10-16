@@ -12,3 +12,11 @@ class Tax_calculator(View):
 
     def get(self, request):
         return render(request, 'geshui.html', {})
+
+
+class Get_Inovice(View):
+    """
+    获取发票代开网页
+    """
+    def get(self, request):
+        return render(request, 'test.html', {})
