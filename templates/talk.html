@@ -63,7 +63,7 @@
     <div class="send opt2">
         <span class="change act"><i class="dis-none">输入法</i></span>
         <input type="text" class="reform btn-record text" id="msg">
-        <i class="wra send-btn">发送</i>
+        <i class="wra send-btn" id="send_msg">发送</i>
     </div>
 </div>
 <script type="text/javascript" src="/static/jswx/jquery-1.12.4.js"></script>
@@ -104,7 +104,7 @@
         $.ajax({
             url: "/sources/query_wechat/",
             type: 'POST',
-            data: {"msg":msg},
+            data: {"msg": msg},
             dataType: 'json',
             error: function (XMLHttpRequest, textStatus, errorThrown) {
                 showAnswerMsg("网络连接错误");
@@ -142,6 +142,11 @@
     } else {
         showAsk_init(question_key)
     }
+    $(document).keyup(function (event) {
+        if (event.keyCode == 13) {
+            $("#send_msg").trigger("click");
+        }
+    });
 </script>
 </body>
 

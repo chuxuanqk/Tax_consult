@@ -309,7 +309,7 @@ class Get_talkView(View):
         return JsonResponse(rew, content_type='application/json')
 
     def search_id(self, num_id):
-        sql_asks = "select * from 'asks_answer' where id={id}".format(id=num_id)
+        sql_asks = "select * from 'ask_answer' where id={id}".format(id=num_id)
         df = pd.read_sql_query(sql_asks, connection)
         data_dict = df.to_dict(orient='index')
         for k, v in data_dict.items():
@@ -350,13 +350,20 @@ class Get_talkView(View):
         answer_dic = {}
         question_dic = {}
 
+        # for i in idex_list:
+        #     id_dic = df_dict[i]
+        #     id_list.append(id_dic['id'])
+        #     answer_list.append(id_dic['answer'])
+        #     question_list.append(id_dic['class4'])
+        #     answer_dic[id_dic['id']] = id_dic['answer']
+        #     question_dic[id_dic['id']] = id_dic['class4']
         for i in idex_list:
             id_dic = df_dict[i]
             id_list.append(id_dic['id'])
             answer_list.append(id_dic['answer'])
-            question_list.append(id_dic['class4'])
+            question_list.append(id_dic['question'])
             answer_dic[id_dic['id']] = id_dic['answer']
-            question_dic[id_dic['id']] = id_dic['class4']
+            question_dic[id_dic['id']] = id_dic['question']
 
         logger.info("答案：{}".format(answer_dic))
         return answer_dic, question_dic, question_list
