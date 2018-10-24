@@ -62,7 +62,7 @@
     </div>
     <div class="send opt2">
         <span class="change act"><i class="dis-none">输入法</i></span>
-        <input type="text" class="reform btn-record text" id="msg">
+        <input type="text" class="reform btn-record text" id="msg" autofocus>
         <i class="wra send-btn" id="send_msg">发送</i>
     </div>
 </div>
@@ -144,8 +144,15 @@
     }
 
     $(document).keyup(function (event) {
-        if (event.keyCode == 13) {
-            $("#send_msg").trigger("click");
+
+        if (event.keyCode === 13) {
+            var reg = /^\s+$/;
+            let msg_txt = $("#msg").val();
+            if (msg_txt === '' || reg.test(msg_txt)) {
+                layer.msg("搜索内容不能为空")
+            } else {
+                $("#send_msg").trigger("click");
+            }
         }
     });
 </script>

@@ -218,73 +218,9 @@ def query_answer(param):
 
 
 class talkView(View):
-    def get(self,request):
+    def get(self, request):
 
         return render(request, 'talk.html', {})
-
-
-class Get_talkView_old(View):
-    """
-    网页版聊天
-    """
-
-    def get(self, request):
-        msg = "您好！税务智能客服很高兴为您服务，请问您有什么问题需要咨询的？"
-        return render(request, 'talk.html', {'msg':msg})
-
-    def post(self, request):
-        source = request.POST.get('msg')
-        num_id=request.POST.get('num_id',-1)
-
-        list_count, list_dic = self.talk_query(source)
-
-        print("成功了!!!!!!!!!!!!!!!!!!!")
-        content = []
-        list_res = []
-
-        if list_count == 1:
-            head = "以下是您咨询的答案:"
-            list_res.append(head)
-            for k, v in list_dic.items():
-                content = v['answer']
-            list_res.append(content)
-            list_res = '<br>'.join(list_res)
-        elif list_count > 1:
-            head = "以下是您可能想要咨询的问题:"
-            list_res.append(head)
-            for k, v in list_dic.items():
-                link = "<a href='#' onclick=showAsk('{id}','{question}')>{question_1}</a>" \
-                    .format(question=v['class4'], id=v['id'],question_1=v['class4'])
-                content.append(link)
-            content = content[:4]
-            list = '<br>'.join(content)
-            list_res.append(list)
-            list_res = '<br>'.join(list_res)
-        else:
-            list_res = TL(source)
-            print(list_res)
-
-        rew = {
-            'code': '200',
-            'message': '成功',
-            'data': list_res,
-        }
-
-        return JsonResponse(rew, content_type='application/json')
-
-    def talk_query(self, param):
-        question = param
-        sql = "select  * from 'asks_answer' where class4 LIKE '%{ask}%'".format(ask=question)
-        df = pd.read_sql_query(sql, connection)
-        df.drop_duplicates("class4",inplace=True)
-        df = df[df['part'] == '0']
-        # df = df[['class4', 'id']]
-        # dataframe类型转换为字典类型
-        # dict_id = {}
-        # dict_id = df.set_index('id').T.to_dict('list')
-        data_count = df.iloc[:, 0].size
-        data_dict = df.to_dict(orient='index')
-        return data_count, data_dict
 
 
 class Get_talkView(View):
@@ -400,3 +336,69 @@ class Get_talkView(View):
             list_res = self.search_id(num_id)
 
         return list_res
+
+
+'''
+class Get_talkView_old(View):
+    """
+    网页版聊天
+    """
+
+    def get(self, request):
+        msg = "您好！税务智能客服很高兴为您服务，请问您有什么问题需要咨询的？"
+        return render(request, 'talk.html', {'msg':msg})
+
+    def post(self, request):
+        source = request.POST.get('msg')
+        num_id=request.POST.get('num_id',-1)
+
+        list_count, list_dic = self.talk_query(source)
+
+        print("成功了!!!!!!!!!!!!!!!!!!!")
+        content = []
+        list_res = []
+
+        if list_count == 1:
+            head = "以下是您咨询的答案:"
+            list_res.append(head)
+            for k, v in list_dic.items():
+                content = v['answer']
+            list_res.append(content)
+            list_res = '<br>'.join(list_res)
+        elif list_count > 1:
+            head = "以下是您可能想要咨询的问题:"
+            list_res.append(head)
+            for k, v in list_dic.items():
+                link = "<a href='#' onclick=showAsk('{id}','{question}')>{question_1}</a>" \
+                    .format(question=v['class4'], id=v['id'],question_1=v['class4'])
+                content.append(link)
+            content = content[:4]
+            list = '<br>'.join(content)
+            list_res.append(list)
+            list_res = '<br>'.join(list_res)
+        else:
+            list_res = TL(source)
+            print(list_res)
+
+        rew = {
+            'code': '200',
+            'message': '成功',
+            'data': list_res,
+        }
+
+        return JsonResponse(rew, content_type='application/json')
+
+    def talk_query(self, param):
+        question = param
+        sql = "select  * from 'asks_answer' where class4 LIKE '%{ask}%'".format(ask=question)
+        df = pd.read_sql_query(sql, connection)
+        df.drop_duplicates("class4",inplace=True)
+        df = df[df['part'] == '0']
+        # df = df[['class4', 'id']]
+        # dataframe类型转换为字典类型
+        # dict_id = {}
+        # dict_id = df.set_index('id').T.to_dict('list')
+        data_count = df.iloc[:, 0].size
+        data_dict = df.to_dict(orient='index')
+        return data_count, data_dict
+'''

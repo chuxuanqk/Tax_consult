@@ -62,11 +62,12 @@ def handler_data():
 
     # jieba分词，获得分词字典,
     for k, v in class4_dic.items():
-        v = re.sub(r'[%s]+' % punctuation, '', v)  # 去除中文字符
+
         # v = re.sub(r'[%s]+' % string.punctuation, '', v)  # 去除英文字符
         # seg_list = jieba.cut_for_search(v)
         # word_cut = ','.join(seg_list)
-
+        v = re.sub('\s', '', v)                    # 去除空格
+        v = re.sub(r'[%s]+' % punctuation, '', v)  # 去除中文字符
         word_cut = re.sub(r'[%s]+' % string.punctuation, '',
                           " ".join([i for i in jieba.cut_for_search(v) if i not in stopwords]))  # 去除英文字符
 
