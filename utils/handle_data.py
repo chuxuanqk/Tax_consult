@@ -28,7 +28,7 @@ def chinese_word_cut(mytext):
     """
     stop_words_file = '../stopwords.txt'
     stopwords = get_custom_stopwords(stop_words_file)
-    ytext = re.sub('\s', '', mytext)                       # 去除空格符
+    mytext = re.sub('\s', '', mytext)                       # 去除空格符
     mytext = re.sub(r'[%s]+' % punctuation, '', mytext)    # 去除中文标点符号
     # 去除英文标点符号，处理停用词，分词
     cutted_word = re.sub(r'[%s]+' % string.punctuation, '',
@@ -61,6 +61,7 @@ def Processing_Data(sql="select * from ask_answer", column='question'):
     connection = sqlite3.Connection('../LZ_DB.db')
 
     df = pd.read_sql_query(sql, connection)
+    df.drop_duplicates(column, inplace=True)  # 使用pandas丢弃重复值
     question_dic = {}
     question = df[column]
     question_dic = question.to_dict()

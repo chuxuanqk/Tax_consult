@@ -1,5 +1,4 @@
 
-
 # Create your views here.
 import re
 import time
@@ -323,6 +322,7 @@ class Get_talkView(View):
                 head = "以下是您可能想要咨询的问题:"
                 list_res.append(head)
                 for k, v in question_dic.items():
+                    v = re.sub('\s', '', v)  # 去除空格符
                     link = "<a href='#' onclick=showAsk('{id}','{question}')>{question_1}</a>" \
                         .format(question=v, id=k, question_1=v)
                     content.append(link)

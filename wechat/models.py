@@ -80,7 +80,7 @@ def Processing_Data():
     # conn = sqlite3.Connection('LZ_DB.db')
     sql = "select * from ask_answer"
     df = pd.read_sql_query(sql, connection)
-
+    df.drop_duplicates('question', inplace=True)  # 使用pandas丢弃重复值
     question_dic = {}
     question = df['question']
     question_dic = question.to_dict()
