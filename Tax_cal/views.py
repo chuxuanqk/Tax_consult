@@ -11,7 +11,7 @@ class Tax_calculator(View):
     """
 
     def get(self, request):
-        return render(request, 'geshui.html', {})
+        return render(request, 'index.html', {})
 
 
 class Get_Inovice(View):

@@ -8,6 +8,6 @@ from Tax_cal.views import Tax_calculator, Get_Inovice
 
 
 urlpatterns = [
-    url('geshui/', Tax_calculator.as_view(), name='个税计算器'),
+    url('cal/', Tax_calculator.as_view(), name='个税计算器'),
     url('fpdk/', Get_Inovice.as_view(), name="发票代开"),
 ]

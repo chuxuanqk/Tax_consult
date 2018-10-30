@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9d8ad585-bb0f-47f7-8478-9c9f6d955af2" name="Default" comment="&quot;添加utils, 添加删除空格&quot;">
+    <list default="true" id="9d8ad585-bb0f-47f7-8478-9c9f6d955af2" name="Default" comment="&quot;添加重复值过滤，修改文本结构&quot;">
+      <change afterPath="$PROJECT_DIR$/static/css/app.5f415571341dcc3ef31f6c3714f91c8c.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/app.5f415571341dcc3ef31f6c3714f91c8c.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/bg.bf29e69.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/border.a201d80.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/btn-bg.6fb7271.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/btn-circle.6ebdebe.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/btn-share.7f6c766.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/btn.694324a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/circle.555435e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/knowledge.0a5166d.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/result-title.1afb1db.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/title.1fb95d8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/app.be1dfe33ce091502404d.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/app.be1dfe33ce091502404d.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/manifest.3ad1d5771e9b13dbdad2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/manifest.3ad1d5771e9b13dbdad2.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/vendor.97a4a7c9c0984149d764.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/vendor.97a4a7c9c0984149d764.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LZ_ZX.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/DB/LZ_ZX.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tax_consult/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tax_consult/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/DB/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/handle_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/handle_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/wechat/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/wechat/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tax_cal/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tax_cal/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tax_cal/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tax_cal/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,38 +71,59 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tax_consult/settings.py">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tax_cal/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="55" column="61" selection-start-line="55" selection-start-column="61" selection-end-line="55" selection-end-column="61" />
-              <folding>
-                <element signature="e#316#325#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="216">
+              <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wechat/views.py">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tax_cal/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tax_consult/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="230">
-              <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+              <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="17" />
               <folding>
-                <element signature="e#27#36#0" expanded="true" />
+                <element signature="e#645#686#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wechat/models.py">
+      <file leaf-file-name="talk.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/talk.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="84" column="29" lean-forward="true" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="29" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="267">
+              <caret line="70" column="54" selection-start-line="70" selection-start-column="54" selection-end-line="70" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" column="87" selection-start-line="5" selection-start-column="87" selection-end-line="5" selection-end-column="87" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.be1dfe33ce091502404d.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/js/app.be1dfe33ce091502404d.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="129">
+              <caret column="57442" lean-forward="true" selection-start-column="57442" selection-end-column="57442" />
             </state>
           </provider>
         </entry>
@@ -104,15 +140,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sq</find>
-      <find>网络连接错误哦哦哦</find>
-      <find>,</find>
-      <find>join</find>
-      <find>GISAI</find>
-      <find>show</find>
-      <find>showAsk</find>
-      <find>send</find>
-      <find>send(</find>
       <find>/sources/query_wechat/</find>
       <find>showA</find>
       <find>head</find>
@@ -134,6 +161,15 @@
       <find>是</find>
       <find>df_dict</find>
       <find>drop</find>
+      <find>./static</find>
+      <find>./static/img/btn</find>
+      <find>btn</find>
+      <find>btn-share.</find>
+      <find>&lt;img data-v-4903425c=&quot;&quot; src=&quot;./static/img/btn.694324a.png&quot; alt=&quot;&quot; class=&quot;btn-image&quot;&gt;</find>
+      <find>694324</find>
+      <find>a.p</find>
+      <find>static</find>
+      <find>static/</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -159,8 +195,6 @@
         <option value="$PROJECT_DIR$/stopwords.txt" />
         <option value="$PROJECT_DIR$/templates/geshui.html" />
         <option value="$PROJECT_DIR$/Tax_consult/urls.py" />
-        <option value="$PROJECT_DIR$/Tax_cal/views.py" />
-        <option value="$PROJECT_DIR$/Tax_cal/urls.py" />
         <option value="$PROJECT_DIR$/templates/test.html" />
         <option value="$PROJECT_DIR$/templates/talk.html" />
         <option value="$PROJECT_DIR$/utils/12366_async.py" />
@@ -170,6 +204,10 @@
         <option value="$PROJECT_DIR$/wechat/views.py" />
         <option value="$PROJECT_DIR$/utils/handle_data.py" />
         <option value="$PROJECT_DIR$/wechat/models.py" />
+        <option value="$PROJECT_DIR$/Tax_cal/views.py" />
+        <option value="$PROJECT_DIR$/Tax_cal/urls.py" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/static/js/app.be1dfe33ce091502404d.js" />
       </list>
     </option>
   </component>
@@ -183,10 +221,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="47" />
-    <option name="y" value="42" />
-    <option name="width" value="1155" />
-    <option name="height" value="698" />
+    <option name="y" value="57" />
+    <option name="width" value="1097" />
+    <option name="height" value="729" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -201,6 +238,33 @@
             <path>
               <item name="Tax_consult" type="b2602c69:ProjectViewProjectNode" />
               <item name="Tax_consult" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tax_consult" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tax_consult" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tax_consult" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tax_consult" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tax_consult" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tax_consult" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tax_consult" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tax_consult" type="462c0819:PsiDirectoryNode" />
+              <item name="Tax_consult" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tax_consult" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tax_consult" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -217,18 +281,19 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/static/jswx" />
-      <recent name="$PROJECT_DIR$/templates" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/static" />
-      <recent name="$PROJECT_DIR$/static/images" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates" />
       <recent name="$PROJECT_DIR$/DB" />
       <recent name="$PROJECT_DIR$/wechat" />
       <recent name="$PROJECT_DIR$/static" />
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static" />
+      <recent name="$PROJECT_DIR$/static/jswx" />
+      <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/static/images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -657,21 +722,28 @@
       <option name="project" value="LOCAL" />
       <updated>1540374134149</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="&quot;添加重复值过滤，修改文本结构&quot;">
+      <created>1540807544000</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1540807544000</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="124" y="42" width="1155" height="698" extended-state="0" />
+    <frame x="0" y="57" width="1097" height="729" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.15390174" side_tool="true" weight="0.43134087" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.8713873" visible="true" weight="0.2795341" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8713873" visible="true" weight="0.2658228" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49918434" weight="0.38344827" />
       <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.49918434" weight="0.32956383" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.84609824" weight="0.34775373" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17879605" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32322276" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32940108" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -747,7 +819,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="&quot;fix token&quot;" />
     <MESSAGE value="&quot;add 日志系统&quot;" />
     <MESSAGE value="&quot;修改日志系统&quot;" />
     <MESSAGE value="&quot;添加微信日志信息&quot;" />
@@ -772,7 +843,8 @@
     <MESSAGE value="&quot;添加个税计算器&quot;" />
     <MESSAGE value="&quot;添加test.html&quot;" />
     <MESSAGE value="&quot;添加utils, 添加删除空格&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;添加utils, 添加删除空格&quot;" />
+    <MESSAGE value="&quot;添加重复值过滤，修改文本结构&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;添加重复值过滤，修改文本结构&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -787,41 +859,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Tax_consult/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Applications/anaconda3/lib/python3.6/logging/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33444">
-          <caret line="1858" column="4" selection-start-line="1858" selection-start-column="4" selection-end-line="1858" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Applications/anaconda3/lib/python3.6/site-packages/django/http/response.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5004">
-          <caret line="299" column="23" selection-start-line="299" selection-start-column="23" selection-end-line="299" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wechat/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1224">
-          <caret line="80" column="37" selection-start-line="80" selection-start-column="37" selection-end-line="80" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tax_consult/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2250">
-          <caret line="125" column="8" selection-start-line="125" selection-start-column="8" selection-end-line="125" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tax_consult/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -1004,20 +1041,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tax_cal/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tax_cal/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Applications/anaconda3/lib/python3.6/asyncio/events.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1088,13 +1111,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/talk.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="70" column="54" selection-start-line="70" selection-start-column="54" selection-end-line="70" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/answer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -1109,19 +1125,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tax_consult/urls.py">
+    <entry file="file://$PROJECT_DIR$/wechat/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tax_consult/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="55" column="61" selection-start-line="55" selection-start-column="61" selection-end-line="55" selection-end-column="61" />
+        <state relative-caret-position="41">
+          <caret line="84" column="29" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="29" />
           <folding>
-            <element signature="e#316#325#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1136,6 +1145,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Tax_consult/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="55" column="61" selection-start-line="55" selection-start-column="61" selection-end-line="55" selection-end-column="61" />
+          <folding>
+            <element signature="e#316#325#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/utils/handle_data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
@@ -1146,13 +1165,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wechat/models.py">
+    <entry file="file://$PROJECT_DIR$/Tax_cal/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="84" column="29" lean-forward="true" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="29" />
+        <state relative-caret-position="216">
+          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/talk.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="70" column="54" selection-start-line="70" selection-start-column="54" selection-end-line="70" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/img/btn.694324a.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/img/result-title.1afb1db.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="87" selection-start-line="5" selection-start-column="87" selection-end-line="5" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tax_cal/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tax_consult/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="17" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#645#686#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/app.5f415571341dcc3ef31f6c3714f91c8c.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2017">
+          <caret column="10018" selection-start-column="10018" selection-end-column="10018" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/app.be1dfe33ce091502404d.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret column="57442" lean-forward="true" selection-start-column="57442" selection-end-column="57442" />
         </state>
       </provider>
     </entry>
