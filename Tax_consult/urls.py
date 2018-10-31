@@ -33,5 +33,4 @@ urlpatterns = [
     url(r'^GetInfoView/(.+)/$', GetInfoView.as_view(), name='GetInfoView'),
     url(r'^GetListView/(.*?)/$', GetListView.as_view(), name='获取问题列表'),
     url(r'^talk/$', csrf_exempt(Get_talkView.as_view()), name='聊天'),
-
 ]
