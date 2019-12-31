@@ -21,9 +21,30 @@ ln -s /bin/pip3.6 /bin/pip3
 安装uwsgi
 python3 -m pip install uwsgi
 
+安装nginx
+cd ~
+yum install pcre pcre-devel
+yum install openssl openssl-devel
+wget http://nginx.org/download/nginx-1.5.6.tar.gz
+tar xf nginx-1.5.6.tar.gz
+cd nginx-1.5.6
+./configure --prefix=/usr/local/nginx-1.5.6 \
+--with-http_stub_status_module \
+--with-http_gzip_static_module
+make && make install
+ln -s /usr/local/nginx-1.5.6/sbin/nginx /bin/nginx
+
+
 在线项目部署
 在服务器上创建简单Django项目hello，结合uwsgi+Django+nginx。
 
 然后使用如下命令启动uwsgi：
 
 uwsgi –ini uwsgi.ini
+
+启动nginx：
+
+nginx -c /root/Code/Tax_consult/mysite_nginx.conf
+
+启动uwsgi：
+uwsgi –ini /root/Code/Tax_consult/mysite_uwsgi.ini
