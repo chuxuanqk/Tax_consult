@@ -1,0 +1,102 @@
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Jan  1 13:06:30 2020] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-39) on 31 December 2019 16:05:27
+os: Linux-3.10.0-1062.1.2.el7.x86_64 #1 SMP Mon Sep 30 14:19:46 UTC 2019
+nodename: iZwz9g2fbb7zsbrdony891Z
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/Code/Tax_consult
+writing pidfile to /tmp/Tax_consult.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/Code/Tax_consult
+your processes number limit is 7270
+limiting address space of processes...
+your process address space limit is 536870912 bytes (512 MB)
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.8 (default, Aug  7 2019, 17:28:10)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1825160
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+The -s/--socket option is missing and stdin is not a socket.
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Jan  1 13:07:30 2020] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-39) on 31 December 2019 16:05:27
+os: Linux-3.10.0-1062.1.2.el7.x86_64 #1 SMP Mon Sep 30 14:19:46 UTC 2019
+nodename: iZwz9g2fbb7zsbrdony891Z
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/Code/Tax_consult
+writing pidfile to /tmp/Tax_consult.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/Code/Tax_consult
+your processes number limit is 7270
+limiting address space of processes...
+your process address space limit is 536870912 bytes (512 MB)
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.8 (default, Aug  7 2019, 17:28:10)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x2598160
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+The -s/--socket option is missing and stdin is not a socket.
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Jan  1 13:10:29 2020] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-39) on 31 December 2019 16:05:27
+os: Linux-3.10.0-1062.1.2.el7.x86_64 #1 SMP Mon Sep 30 14:19:46 UTC 2019
+nodename: iZwz9g2fbb7zsbrdony891Z
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/Code/Tax_consult
+writing pidfile to /tmp/Tax_consult.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/Code/Tax_consult
+your processes number limit is 7270
+limiting address space of processes...
+your process address space limit is 536870912 bytes (512 MB)
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+bind(): Cannot assign requested address [core/socket.c line 769]
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Jan  1 13:11:49 2020] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-39) on 31 December 2019 16:05:27
+os: Linux-3.10.0-1062.1.2.el7.x86_64 #1 SMP Mon Sep 30 14:19:46 UTC 2019
+nodename: iZwz9g2fbb7zsbrdony891Z
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/Code/Tax_consult
+writing pidfile to /tmp/Tax_consult.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/Code/Tax_consult/Tax_consult
+your processes number limit is 7270
+limiting address space of processes...
+your process address space limit is 536870912 bytes (512 MB)
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+bind(): Cannot assign requested address [core/socket.c line 769]
