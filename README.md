@@ -42,12 +42,12 @@ ln -s /usr/local/nginx-1.5.6/sbin/nginx /bin/nginx
 
 uwsgi –ini uwsgi.ini
 
-启动nginx：
-
-nginx -c /root/Code/Tax_consult/mysite_nginx.conf
-
 启动uwsgi：
 uwsgi –ini /root/Code/Tax_consult/mysite_uwsgi.ini
+
+启动nginx：
+nginx -c /root/Code/Tax_consult/mysite_nginx.conf
+
 
 以下包含了 Nginx 常用的几个命令：
 
