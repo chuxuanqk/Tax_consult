@@ -32,7 +32,7 @@ cd nginx-1.5.6
 --with-http_stub_status_module \
 --with-http_gzip_static_module
 make && make install
-ln -s /usr/local/nginx-1.5.6/sbin/nginx /bin/nginx
+ln -s /usr/local/nginx-1.5.6/sbin/nginx /bin/nginx 
 
 
 在线项目部署
@@ -48,3 +48,9 @@ nginx -c /root/Code/Tax_consult/mysite_nginx.conf
 
 启动uwsgi：
 uwsgi –ini /root/Code/Tax_consult/mysite_uwsgi.ini
+
+以下包含了 Nginx 常用的几个命令：
+
+/usr/local/webserver/nginx/sbin/nginx -s reload            # 重新载入配置文件
+/usr/local/webserver/nginx/sbin/nginx -s reopen            # 重启 Nginx
+/usr/local/webserver/nginx/sbin/nginx -s stop              # 停止 Nginx
