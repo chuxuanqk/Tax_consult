@@ -79,6 +79,7 @@ def handler_data():
 def Processing_Data():
     # conn = sqlite3.Connection('LZ_DB.db')
     sql = "select * from ask_answer"
+    #connection.text_factory = str
     df = pd.read_sql_query(sql, connection)
     df.drop_duplicates('question', inplace=True)  # 使用pandas丢弃重复值
     question_dic = {}
