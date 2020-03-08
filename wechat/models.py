@@ -92,7 +92,7 @@ def Processing_Data():
 
 # 从中文停用词表里面，把停用词作为列表格式保存并返回, 使用的哈工大停用词表文件
 def get_custom_stopwords(stop_words_file):
-    with open(stop_words_file) as f:
+    with open(stop_words_file, encoding='utf-8') as f:
         stopwords = f.read()
     stopwords_list = stopwords.split('\n')
     custom_stopwords_list = [i for i in stopwords_list]

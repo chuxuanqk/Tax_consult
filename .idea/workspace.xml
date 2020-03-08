@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9d8ad585-bb0f-47f7-8478-9c9f6d955af2" name="Default" comment="">
+    <list default="true" id="9d8ad585-bb0f-47f7-8478-9c9f6d955af2" name="Default" comment="&quot;修改图灵apikey&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite_nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/mysite_nginx.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite_uwsgi.ini" beforeDir="false" afterPath="$PROJECT_DIR$/mysite_uwsgi.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wechat/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/wechat/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wechat/tuling.py" beforeDir="false" afterPath="$PROJECT_DIR$/wechat/tuling.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +101,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -297,7 +295,7 @@
       <option name="presentableId" value="Default" />
       <updated>1536679866712</updated>
       <workItem from="1577948349252" duration="901000" />
-      <workItem from="1583638686906" duration="255000" />
+      <workItem from="1583638686906" duration="3883000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;test&quot;">
       <created>1536681427667</created>
@@ -586,7 +584,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540972294704</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="&quot;修改图灵apikey&quot;">
+      <created>1583638985308</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1583638985308</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -610,7 +615,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="&quot;添加微信日志信息&quot;" />
     <MESSAGE value="&quot;添加微信日志信息1&quot;" />
     <MESSAGE value="&quot;修改官方文档中的hashlib中的错误&quot;" />
     <MESSAGE value="&quot;添加微信自动回复__test&quot;" />
@@ -635,13 +639,26 @@
     <MESSAGE value="&quot;添加重复值过滤，修改文本结构&quot;" />
     <MESSAGE value="&quot;添加税务计算器功能&quot;" />
     <MESSAGE value="&quot;修复税务计算器功能&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;修复税务计算器功能&quot;" />
+    <MESSAGE value="&quot;修改图灵apikey&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;修改图灵apikey&quot;" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="391" y="0" width="598" height="768" key="#Tax_consult" timestamp="1583642599899">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="391" y="0" width="598" height="768" key="#Tax_consult/0.0.1366.768@0.0.1366.768" timestamp="1583642599899" />
+    <state x="277" y="0" key="CommitChangelistDialog2" timestamp="1583642285316">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="277" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1583642285316" />
     <state x="0" y="0" key="MultipleFileMergeDialog" timestamp="1577948475368">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="0" y="0" key="MultipleFileMergeDialog/0.0.1366.768@0.0.1366.768" timestamp="1577948475368" />
+    <state x="184" y="26" key="SettingsEditor" timestamp="1583642671187">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="184" y="26" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1583642671187" />
     <state x="475" y="301" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1577948443742">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
