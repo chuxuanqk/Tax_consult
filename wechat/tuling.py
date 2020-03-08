@@ -12,8 +12,9 @@ api_url = "http://openapi.tuling123.com/openapi/api/v2"
 # 申请 API key 谢谢
 # 另外需要 requests 支持
 # 修改成调用图灵官方接口
-url = 'http://www.tuling123.com/openapi/api'
-apikey = '308ea23fe1254113aad1017164274a84'
+url = "http://www.tuling123.com/openapi/api"
+# apikey = '308ea23fe1254113aad1017164274a84'
+apikey = "517a329a26474e9c94a963b2d8a839d3"
 
 #使用初版api
 def tuling(content):

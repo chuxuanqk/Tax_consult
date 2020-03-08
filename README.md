@@ -43,8 +43,8 @@ ln -s /usr/local/nginx-1.5.6/sbin/nginx /bin/nginx
 uwsgi –ini uwsgi.ini
 
 启动uwsgi：
-uwsgi –ini /root/Code/Tax_consult/mysite_uwsgi.ini
-
+<!-- uwsgi –ini /root/Code/Tax_consult/mysite_uwsgi.ini -->
+uwsgi  /root/Code/Tax_consult/mysite_uwsgi.ini
 启动nginx：
 nginx -c /root/Code/Tax_consult/mysite_nginx.conf
 
@@ -54,3 +54,10 @@ nginx -c /root/Code/Tax_consult/mysite_nginx.conf
 /usr/local/webserver/nginx/sbin/nginx -s reload            # 重新载入配置文件
 /usr/local/webserver/nginx/sbin/nginx -s reopen            # 重启 Nginx
 /usr/local/webserver/nginx/sbin/nginx -s stop              # 停止 Nginx
+
+# 查看已经运行的端口号
+ netstat -ntlp
+
+ uwsgi --http :8000 --module Tax_consult.wsgi        打开浏览器  ip:8000
+
+ 172.18.60.190
