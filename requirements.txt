@@ -9,7 +9,7 @@
 # wechat/models.py: 1
 # wechat/tests.py: 1
 # wechat/views.py: 20,21
-Django == 1.11.15
+Django == 2.2.24
 
 # wechat/views.py: 7
 jieba == 0.39
